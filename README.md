@@ -13,4 +13,5 @@ Even though we have assigned role to each team member, the members will and to c
 ![image](https://user-images.githubusercontent.com/79486450/124840502-20c81900-df59-11eb-8956-fad210d56e95.png)
 
 ## ERD:
-https://app.quickdatabasediagrams.com/#/d/X7DH8A
+![ERD-Air_BandB](https://user-images.githubusercontent.com/78666055/125123343-8b499800-e0c4-11eb-8a4d-483298cb137a.png)
+
