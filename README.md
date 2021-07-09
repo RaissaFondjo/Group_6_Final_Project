@@ -11,3 +11,6 @@ Even though we have assigned role to each team member, the members will and to c
 
 ## Source of Data: 
 ![image](https://user-images.githubusercontent.com/79486450/124840502-20c81900-df59-11eb-8956-fad210d56e95.png)
+
+## ERD:
+https://app.quickdatabasediagrams.com/#/d/X7DH8A
