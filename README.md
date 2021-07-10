@@ -86,6 +86,6 @@ We will be using Tableau to create final dashboards. It will be directly tied to
 2. Features input: where users can select from twenty-two feature dropdowns to predict rent prices. Multiple Features can be displayed at once and selected areas of the graph can be enlarged with adapting axes.
 3. Tableau dashboards: we will embed a number of Tableau dashboards in the Dashboards page
 
-## link to the Tableau Dashboard
+### link to the Tableau Dashboard
 https://public.tableau.com/authoring/BostonAirbnbRentPricesDataExploration/Numberoflistings/Dashboard%201#1. Where we will show our different interactive data visualizations one of them is the Correlation Between Rent Prices And Each Features. 
 
