@@ -76,3 +76,13 @@ Our objective in this project is to predict Airbnb rental values using the featu
 - `cancellation_policy`
 
 Once the datasets are cleaned and any outliers are removed, we can use scikit-learn machine library's `f_regression()` function to provide correlation scores for the features listed above. Once we have these scores, we can select features that will increase our model's accuracy and drop any features that do not have a high correlation. This will help optimize our model for predictions. 
+
+## Dashboard:
+
+We will be using Tableau to create final dashboards. It will be directly tied to our Postgres database via a direct connection.
+
+•	The interactive elements we use include:
+1. Navigation bar: includes tabs to Dashboards, Machine Learning and Github Repository pages
+2. Features input: where users can select from twenty-two feature dropdowns to predict rent prices. Multiple Features can be displayed at once and selected areas of the graph can be enlarged with adapting axes.
+3. Tableau dashboards: we will embed a number of Tableau dashboards in the Dashboards page
+
