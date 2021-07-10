@@ -12,8 +12,6 @@ Even though we have assigned role to each team member, the members will and to c
 ## Source of Data: 
 ![image](https://user-images.githubusercontent.com/79486450/124840502-20c81900-df59-11eb-8956-fad210d56e95.png)
 
-## ERD:
-
 ## Machine Learning Model 
 
   ![data-16-5-5-1-NLP-Pipeline](https://user-images.githubusercontent.com/45697471/125150334-fe76fc80-e10c-11eb-8974-252280baab95.png)
@@ -42,3 +40,4 @@ Our objective in this project is to predict Airbnb rental values using the featu
 
 Once the datasets are cleaned and any outliers are removed, we can use scikit-learn machine library's `f_regression()` function to provide correlation scores for the features listed above. Once we have these scores, we can select features that will increase our model's accuracy and drop any features that do not have a high correlation. This will help optimize our model for predictions. 
 
+## ERD:
