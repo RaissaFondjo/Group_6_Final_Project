@@ -39,3 +39,5 @@ Our objective in this project is to predict Airbnb rental values using the featu
 - `cancellation_policy`
 
 Once the datasets are cleaned and any outliers are removed, we can use scikit-learn machine library's `f_regression()` function to provide correlation scores for the features listed above. Once we have these scores, we can select features that will increase our model's accuracy and drop any features that do not have a high correlation. This will help optimize our model for predictions. 
+
+## ERD
