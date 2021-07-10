@@ -34,13 +34,13 @@ For this project we selected Airbnb datasets from Kaggle.  The datasets contains
 
 ## Questions that we want answer with the data: 
 - What are the key factors that effect the price of the rental property? 
-    -*We wanted to identify if the following key feature drive the price of the property: Neighborhood (Location), Competitor’s prices, Special Amenities, consumers’ reviews, and opinions.
+    - We wanted to identify if the following key feature drive the price of the property: Neighborhood (Location), Competitor’s prices, Special Amenities, consumers’ reviews, and opinions.
     
 - Within the same neighborhood what make a customer to select one vs another property?
-    -*We wanted to identify if there is a correlation between reviews and # of times certain property being rent out.
+    - We wanted to identify if there is a correlation between reviews and # of times certain property being rent out.
     
 - Which neighborhoods in Boston have the highest rental prices?
-    -*Reason behind the high price.
+    - Reason behind the high price.
 
 ## ERD:
 ![ERD-Air_BandB](https://user-images.githubusercontent.com/78666055/125123343-8b499800-e0c4-11eb-8a4d-483298cb137a.png)
