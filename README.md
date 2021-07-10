@@ -14,4 +14,4 @@ Even though we have assigned role to each team member, the members will and to c
 
 ## Machine Learning Model 
 
-Our objective in this project is to predict Airbnb rental values using the features given in our dataset. We plan to do this by conducting a sentiment analysis using data from `reviews2017.csv`, as well as taking variables from `listings2017.csv` to perform a multiple linear regression. 
+Our objective in this project is to predict Airbnb rental values using the features given in our dataset. We plan to do this by conducting a sentiment analysis using data about comments from `reviews2017.csv`, and feeding it to an NLP pipeline so that it can be used for machine learning, as well as taking variables from `listings2017.csv` to perform a multiple linear regression. 
