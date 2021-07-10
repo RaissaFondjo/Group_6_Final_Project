@@ -43,7 +43,8 @@ For this project we selected Airbnb datasets from Kaggle.  The datasets contains
     - Reason behind the high price.
 
 ## Database ERD:
-• PostgresSQL is used to store and manipulate data. The image below represents the tables of data that are uploaded onto the database in Postgres. The entity relational diagram allows for easier joining of tables with SQL and is a helpful reference while importing data into the database. There are two main tables with data that is used to build and perform the machine learning model. • The most common and obvious connect between the two datasets is the ID column.
+* PostgresSQL is used to store and manipulate data. The image below represents the tables of data that are uploaded onto the database in Postgres. The entity relational diagram allows for easier joining of tables with SQL and is a helpful reference while importing data into the database. There are two main tables with data that is used to build and perform the machine learning model. 
+* The most common and obvious connect between the two datasets is the ID column.
 ![ERD-Air_BandB](https://user-images.githubusercontent.com/78666055/125123343-8b499800-e0c4-11eb-8a4d-483298cb137a.png)
 
 ## Machine Learning Model:
