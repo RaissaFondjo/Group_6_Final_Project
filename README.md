@@ -8,11 +8,11 @@
 
 |  **Member**  |  **Role**  |  **Responsibilities**  |                                            
 |  :---  |  :---  |  :---  |
-| [Syed Ahmed](https://github.com/ahmed17777)  |  Machine Learning Lead  |  Manage the Database and ETL Process  |
+| [Syed Ahmed](https://github.com/ahmed17777)  |  Machine Learning Lead  |  Manage the Machine Learning Model and Design  |
 | [Pascal Duchesneau](https://github.com/Pascalduc)  |  GitHub Lead  |  Manage the GitHub Repository  |
 | [Raissa Fondjo]( https://github.com/RaissaFondjo)  |  Dashboard Lead  |  Manage the Presentation Dashboard  |
 | [Geetha Shanthibushan](https://github.com/gshanthibushan)  |  Project Coordinator  |  Manage the Technologies and tracking group ideas, decisions, and progress  |
-| [Lalchand Shivraj](https://github.com/LalchandShivraj)  |  Dashboard Lead  |  Manage the Machine Learning Model and Design  |
+| [Lalchand Shivraj](https://github.com/LalchandShivraj)  |  Database Lead  | Manage the Database and ETL Process  |
  
 Even though we have assigned role to each team member, the members will and to contribute equally throughout the final project.
 
