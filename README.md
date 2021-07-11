@@ -91,6 +91,6 @@ Features input: where users can select from twenty-two feature dropdowns to pred
 Tableau dashboards: we will embed a number of Tableau dashboards in the Dashboards page
 
 #### link to the Tableau Dashboard
-https://public.tableau.com/authoring/BostonAirbnbRentPricesDataExploration/Numberoflistings/Dashboard%201#1. Where we will show our different interactive data visualizations one of them is the Correlation Between Rent Prices And Each Features.
+https://public.tableau.com/authoring/BostonAirbnbRentPricesDataExploration/Numberoflistings/Dashboard%201#1 . Where we will show our different interactive data visualizations one of them is the Correlation Between Rent Prices And Each Features.
 
 
