@@ -47,6 +47,13 @@ For this project we selected Airbnb datasets from Kaggle.  The datasets contains
 * The most common and obvious connect between the two datasets is the ID column.
 ![ERD-Air_BandB](https://user-images.githubusercontent.com/78666055/125123343-8b499800-e0c4-11eb-8a4d-483298cb137a.png)
 
+* A sample code to merge the two tables can be found in the Jupyter Notebook file `AirBnB.ipynb`.
+
+```
+airbnb_df = pd.merge(listings_df, reviews_df, how='left', left_on=['id'], right_on=['listing_id'])
+airbnb_df.head(10)
+```
+
 ## Machine Learning Model:
 
   ![data-16-5-5-1-NLP-Pipeline](https://user-images.githubusercontent.com/45697471/125150334-fe76fc80-e10c-11eb-8974-252280baab95.png)
