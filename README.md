@@ -32,7 +32,7 @@ For this project we selected Airbnb datasets from Kaggle.  The datasets contains
 |  Kaggle  |  https://www.kaggle.com/airbnb/boston  |  Calendar.csv, including listing id and the price and availability for that day  |
 
 
-## Questions that we want to answer with the data: 
+## Questions we want to answer with the data: 
 - What are the key factors that effect the price of the rental property? 
     - We wanted to identify if the following key feature drive the price of the property: Neighborhood (Location), Competitor’s prices, Special Amenities, consumers’ reviews, and opinions.
     
