@@ -9,7 +9,7 @@
 |  **Member**  |  **Role**  |  **Responsibilities**  |                                            
 |  :---  |  :---  |  :---  |
 | [Syed Ahmed](https://github.com/ahmed17777)  |  Machine Learning Lead  |  Manage the Database and ETL Process  |
-| [Pascal Duscesneau](https://github.com/Pascalduc)  |  GitHub Lead  |  Manage the GitHub Repository  |
+| [Pascal Duchesneau](https://github.com/Pascalduc)  |  GitHub Lead  |  Manage the GitHub Repository  |
 | [Raissa Fondjo]( https://github.com/RaissaFondjo)  |  Dashboard Lead  |  Manage the Presentation Dashboard  |
 | [Geetha Shanthibushan](https://github.com/gshanthibushan)  |  Project Coordinator  |  Manage the Technologies and tracking group ideas, decisions, and progress  |
 | [Lalchand Shivraj](https://github.com/LalchandShivraj)  |  Dashboard Lead  |  Manage the Machine Learning Model and Design  |
@@ -32,7 +32,7 @@ For this project we selected Airbnb datasets from Kaggle.  The datasets contains
 |  Kaggle  |  https://www.kaggle.com/airbnb/boston  |  Calendar.csv, including listing id and the price and availability for that day  |
 
 
-## Questions that we want answer with the data: 
+## Questions that we want to answer with the data: 
 - What are the key factors that effect the price of the rental property? 
     - We wanted to identify if the following key feature drive the price of the property: Neighborhood (Location), Competitor’s prices, Special Amenities, consumers’ reviews, and opinions.
     
