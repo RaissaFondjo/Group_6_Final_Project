@@ -125,7 +125,8 @@ select * from listings_with_reviews;
 -- Update columns in the listings_with_reviews table that were created as varchar because the contained
 -- non numeric data:
 -- 1. Set null and N/A to 0
--- 2. Remove unwanted characters
+-- 2. Remove unwanted characters ($ and ,)
+-- 3. Alter column type from varchar to integer and float
 -- ----------------------------------------------------------------------------------------------------
 update listings_with_reviews set host_acceptance_rate = '0%' where host_acceptance_rate = 'N/A';
 update listings_with_reviews set host_response_rate = '0%' where host_response_rate = 'N/A';
@@ -143,6 +144,34 @@ update listings_with_reviews set price = ltrim(price, '$');
 update listings_with_reviews set security_deposit = ltrim(security_deposit, '$');
 update listings_with_reviews set cleaning_fee = ltrim(cleaning_fee, '$');
 update listings_with_reviews set extra_people = ltrim(extra_people, '$');
+update listings_with_reviews set price = translate(price, ',', '');
+update listings_with_reviews set security_deposit = translate(security_deposit, ',', '');
+update listings_with_reviews set cleaning_fee = translate(cleaning_fee, ',', '');
+update listings_with_reviews set extra_people = translate(extra_people, ',', '');
+
+ALTER TABLE listings_with_reviews
+ALTER COLUMN host_response_rate TYPE INT
+USING host_response_rate::integer;
+
+ALTER TABLE listings_with_reviews
+ALTER COLUMN host_acceptance_rate TYPE INT
+USING host_acceptance_rate::integer;
+
+ALTER TABLE listings_with_reviews
+ALTER COLUMN price TYPE FLOAT
+USING price::FLOAT;
+
+ALTER TABLE listings_with_reviews
+ALTER COLUMN security_deposit TYPE FLOAT
+USING security_deposit::FLOAT;
+
+ALTER TABLE listings_with_reviews
+ALTER COLUMN cleaning_fee TYPE FLOAT
+USING cleaning_fee::FLOAT;
+
+ALTER TABLE listings_with_reviews
+ALTER COLUMN extra_people TYPE FLOAT
+USING extra_people::FLOAT;
 
 -- Drop the amenities and last_review columns as they are no longer needed
 -- -----------------------------------------------------------------------
