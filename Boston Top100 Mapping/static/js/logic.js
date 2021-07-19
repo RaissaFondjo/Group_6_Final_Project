@@ -1,6 +1,6 @@
 // Store our API endpoint inside queryUrl
 var neighborhoodLink = "static/data/Boston_Neighborhoods.geojson";
-var wifiLink = "static/data/Fire_Departments.geojson";
+var listingsLink = "static/data/listings.geojson";
 
 // Function that will determine the color of each neighborhoo
 function chooseColor(hood) {
@@ -76,7 +76,7 @@ function createFeatures(neighborhoodData) {
   // Define a function we want to run once for each feature in the features array
   // Give each feature a popup describing the place and time of the earthquake
   function onEachFeature(features, layer) {
-    layer.bindPopup("<h2>Neighborhood: " + features.properties.Name + "</h2>");
+    layer.bindPopup("<h2>Neighborhood: <hr>" + features.properties.Name + "</h2>");
   }
   // Create a GeoJSON layer containing the features array on the earthquakeData object
   // Run the onEachFeature function once for each piece of data in the array
@@ -96,21 +96,27 @@ function createFeatures(neighborhoodData) {
   createMap(neighborhoods);
 }
 
-// Create the wifi locations layer for our map.
-let wifi = new L.LayerGroup();
+// Create the airbnb listings locations layer for our map.
+let listings = new L.LayerGroup();
 
-// Retrieve the wifi locations GeoJSON data.
-d3.json(wifiLink, function(data) {
+// Retrieve the listings locations GeoJSON data.
+d3.json(listingsLink, function(data) {
   console.log(data);
   // Creating a geoJSON layer with the retrieved data
  L.geoJson(data, {
     onEachFeature: function(features, layer){
-      layer.bindPopup("<h3>" + features.properties.GEOADDRESS + "</h3> <hr> <h4>Fire Dept: " + features.properties.LOCNAME + "</h4>")
+      layer.bindPopup("<h3>Listing id:  " + features.properties.id + 
+      "</h3> <hr> <h4>Property Type: " + features.properties.property_type + "</h4>"
+      + "<h4>Room Type: " + features.properties.room_type + "</h4>"
+      + "<h4>Accomodates: " + features.properties.accomodates + "</h4>"
+      + "<h4>Bedrooms: " + features.properties.bedrooms + "</h4>"
+      + "<h4>Bathrooms: " + features.properties.bathrooms + "</h4>"
+      + "<h4>Price: " + features.properties.price + "$</h4>")
     }
-  }).addTo(wifi);
+  }).addTo(listings);
 
   // Add the wifiLocations layer to our map.
-  wifi.addTo(map);
+  listings.addTo(map);
 });
 
 // Create the createMap function to hold 
@@ -141,14 +147,14 @@ function createMap(neighborhoods) {
   // Create overlay object to hold our overlay layer
   var overlayMaps = {
     "Neiborhoods": neighborhoods,
-    "WiFi": wifi
+    "Top 200 Reviews": listings
   };
 
   // Create our map, giving it the streetmap and earthquakes layers to display on load
   var myMap = L.map("map", {
     center: [42.32, -71.10],
     zoom: 11.5,
-    layers: [streetmap, neighborhoods, wifi]
+    layers: [streetmap, neighborhoods, listings]
   });
 
   // Create a layer control
