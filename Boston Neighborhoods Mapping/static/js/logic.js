@@ -84,7 +84,7 @@ function createFeatures(neighborhoodData) {
     onEachFeature: onEachFeature,
     style: function(features) {
       return {
-        color: "white",
+        color: "blue",
         fillColor: chooseColor(features.properties.Name),
         fillOpacity: 0.5,
         weight: 1.5
