@@ -111,7 +111,7 @@ d3.json(listingsLink, function(data) {
       + "<h4>Accomodates: " + features.properties.accomodates + "</h4>"
       + "<h4>Bedrooms: " + features.properties.bedrooms + "</h4>"
       + "<h4>Bathrooms: " + features.properties.bathrooms + "</h4>"
-      + "<h4>Price: " + features.properties.price + "$</h4>")
+      + "<h4>Price: " + features.properties.price + "$ per night</h4>")
     }
   }).addTo(listings);
 
