@@ -8,3 +8,7 @@ body,
 html {
   height: 100%;
 }
+
+.leaflet-popup-content-wrapper, .leaflet-popup.tip {
+  background-color: rgb(156, 124, 245)
+}

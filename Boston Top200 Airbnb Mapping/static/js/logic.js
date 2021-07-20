@@ -1,6 +1,6 @@
 // Store our API endpoint inside queryUrl
-var neighborhoodLink = "static/data/Boston_Neighborhoods.geojson";
-var listingsLink = "static/data/listings.geojson";
+let neighborhoodLink = "static/data/Boston_Neighborhoods.geojson";
+let listingsLink = "static/data/listings.geojson";
 
 // Function that will determine the color of each neighborhoo
 function chooseColor(hood) {
@@ -80,7 +80,7 @@ function createFeatures(neighborhoodData) {
   }
   // Create a GeoJSON layer containing the features array on the earthquakeData object
   // Run the onEachFeature function once for each piece of data in the array
-  var neighborhoods = L.geoJSON(neighborhoodData, {
+  let neighborhoods = L.geoJSON(neighborhoodData, {
     onEachFeature: onEachFeature,
     style: function(features) {
       return {
@@ -92,7 +92,7 @@ function createFeatures(neighborhoodData) {
     }
   });
 
-  // Send our s layer to the createMap function
+  // Send our neighborhoods layer to the createMap function
   createMap(neighborhoods);
 }
 
@@ -102,7 +102,7 @@ let listings = new L.LayerGroup();
 // Retrieve the listings locations GeoJSON data.
 d3.json(listingsLink, function(data) {
   console.log(data);
-  // Creating a geoJSON layer with the retrieved data
+ // Creating a geoJSON layer with the retrieved data
  L.geoJson(data, {
     onEachFeature: function(features, layer){
       layer.bindPopup("<h3>Listing id:  " + features.properties.id + 
@@ -115,7 +115,7 @@ d3.json(listingsLink, function(data) {
     }
   }).addTo(listings);
 
-  // Add the wifiLocations layer to our map.
+  // Add the  airbnb layer to our map.
   listings.addTo(map);
 });
 
@@ -124,14 +124,14 @@ d3.json(listingsLink, function(data) {
 function createMap(neighborhoods) {
 
   // Define streetmap and darkmap layers
-  var streetmap = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+  let streetmap = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox/streets-v11',
     accessToken: API_KEY
   });
 
-  var darkmap = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+  let darkmap = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox/dark-v10',
@@ -139,19 +139,19 @@ function createMap(neighborhoods) {
   });
 
   // Define a baseMaps object to hold our base layers
-  var baseMaps = {
+  let baseMaps = {
     "Street Map": streetmap,
     "Dark Map": darkmap
   };
 
   // Create overlay object to hold our overlay layer
-  var overlayMaps = {
-    "Neiborhoods": neighborhoods,
+  let overlayMaps = {
+    "Neighborhoods": neighborhoods,
     "Top 200 Reviews": listings
   };
 
   // Create our map, giving it the streetmap and earthquakes layers to display on load
-  var myMap = L.map("map", {
+  let myMap = L.map("map", {
     center: [42.32, -71.10],
     zoom: 11.5,
     layers: [streetmap, neighborhoods, listings]
