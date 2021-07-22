@@ -1,6 +1,6 @@
 // Store our API endpoint inside queryUrl
-let neighborhoodLink = "static/data/Boston_Neighborhoods.geojson";
-let listingsLink = "static/data/listings.geojson";
+let neighborhoodLink = "Boston Top200 Airbnb Mapping/static/data/Boston_Neighborhoods.geojson";
+let listingsLink = "Boston Top200 Airbnb Mapping/static/data/listings.geojson";
 
 // Function that will determine the color of each neighborhoo
 function chooseColor(hood) {
