@@ -9,9 +9,12 @@ drop table listings;
 
 create table Listings
 (id int primary key,
+listing_url varchar,
 host_response_rate varchar,
 host_acceptance_rate varchar,
 host_picture_url varchar,
+street varchar,
+neighbourhood_cleansed varchar,
 latitude float,
 longtitude float,
 property_type varchar,
