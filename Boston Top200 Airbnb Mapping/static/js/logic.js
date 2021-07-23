@@ -1,6 +1,6 @@
 // Store our API endpoint inside queryUrl
-let neighborhoodLink = "Boston Top200 Airbnb Mapping/static/data/Boston_Neighborhoods.geojson";
-let listingsLink = "Boston Top200 Airbnb Mapping/static/data/listings.geojson";
+let neighborhoodLink = "static/data/Boston_Neighborhoods.geojson";
+let listingsLink = "static/data/listings.geojson";
 
 // Function that will determine the color of each neighborhoo
 function chooseColor(hood) {
@@ -106,7 +106,8 @@ d3.json(listingsLink, function(data) {
  L.geoJson(data, {
     onEachFeature: function(features, layer){
       layer.bindPopup("<h3>Listing id:  " + features.properties.id + 
-      "</h3> <hr> <h4>Property Type: " + features.properties.property_type + "</h4>"
+      "</h3> <hr> <h4>Address: " + features.properties.Address + "</h4>"
+      + "<h4>Property Type: " + features.properties.property_type + "</h4>"
       + "<h4>Room Type: " + features.properties.room_type + "</h4>"
       + "<h4>Accomodates: " + features.properties.accomodates + "</h4>"
       + "<h4>Bedrooms: " + features.properties.bedrooms + "</h4>"
