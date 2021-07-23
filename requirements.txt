@@ -2,7 +2,6 @@ absl-py==0.13.0
 alabaster==0.7.12
 appdirs==1.4.4
 argh==0.26.2
-astroid @ file:///C:/ci/astroid_1613500971479/work
 astropy @ file:///C:/ci/astropy_1617745665646/work
 astunparse==1.6.3
 async-generator==1.10
