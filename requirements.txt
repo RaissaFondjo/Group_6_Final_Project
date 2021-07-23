@@ -1,6 +1,5 @@
 absl-py==0.13.0
 alabaster==0.7.12
-anyio @ file:///C:/ci/anyio_1620153167783/work/dist
 appdirs==1.4.4
 argh==0.26.2
 argon2-cffi @ file:///C:/ci/argon2-cffi_1613038019788/work
