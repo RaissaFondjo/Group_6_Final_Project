@@ -1,18 +1,15 @@
-import cgi
-import webapp2
+from flask import Flask, render_template, redirect
 
-class MainPage(webapp2.RequestHandler):
-    def get(self):
-        INDEX_HTML = open('index.html').read()
-        self.response.out.write(INDEX_HTML)
+# Create an instance of Flask
+app = Flask(__name__)
 
-class PageTwo(webapp2.RequestHandler):
-    def post(self):
-        self.response.write('<html><body>You wrote:<pre>')
-        self.response.write(cgi.escape(self.request.get('content')))
-        self.response.write('</pre></body></html>')
+# Route to render index.html template using data from Mongo
+@app.route("/")
+def home():
 
-application = webapp2.WSGIApplication([
-    ('/', MainPage),
-    ('/sign', PageTwo),
-], debug=True)
+
+    # Return template and data
+    return render_template("index.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
