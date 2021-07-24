@@ -1,4 +1,4 @@
-const API_KEY = get.env["API_KEY"]
+const API_KEY = getSelection.env["API_KEY"]
 
 // Store our API endpoint inside queryUrl
 let neighborhoodLink = "../static/data/Boston_Neighborhoods.geojson";
