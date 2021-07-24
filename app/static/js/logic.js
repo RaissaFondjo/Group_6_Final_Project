@@ -1,5 +1,6 @@
-// const API_KEY = getSelection.env"API_KEY"
-const API_KEY = getSelection(config_vars["API_KEY"]);
+// Get API key
+require('dotenv').config();
+const API_KEY = process.env.API_KEY;
 
 // Store our API endpoint inside queryUrl
 let neighborhoodLink = "../static/data/Boston_Neighborhoods.geojson";
