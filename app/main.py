@@ -1,6 +1,9 @@
 from flask import Flask, render_template
 import os
-API_KEY = os.environ.get("API_KEY")
+
+# Read in the API key
+# Read the mailgun secret key from environment variables
+API_KEY = os.environ.get('API_KEY', None)
 
 # Create an instance of Flask
 app = Flask(__name__)
