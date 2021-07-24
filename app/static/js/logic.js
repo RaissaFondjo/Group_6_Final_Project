@@ -1,5 +1,3 @@
-API_KEY = os.environ.get('API_KEY')
-
 // Store our API endpoint inside queryUrl
 let neighborhoodLink = "../static/data/Boston_Neighborhoods.geojson";
 let listingsLink = "../static/data/listings.geojson";
