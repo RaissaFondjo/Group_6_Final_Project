@@ -1,6 +1,4 @@
 from flask import Flask, render_template
-from boto.s3.connection import S3Connection
-s3 = S3Connection(os.environ['API_KEY'], os.environ['API_KEY'])
 
 # Create an instance of Flask
 app = Flask(__name__)
