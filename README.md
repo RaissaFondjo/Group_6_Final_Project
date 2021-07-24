@@ -98,7 +98,7 @@ To get the insight view of the Boston dataset, we used Tableau Visualization met
   * An interactive map was created showing Boston neighborhoods and the top 200 listings based on `review_scores_rating`. For this, we first connected the Mongo database through `PyMongo.MongoClient` module while hiding our login credentials from uploaded code using the `getpass` function. A DataFrame was then generated with the columns we wanted to list on the map, then sorted based on score ratings before saving the data in a geojson format. 
 
   * From the geojson file containing the longitude and latitude, a pin and popup were added to the map in JavaScript and HTML, which worked locally.
-![Map](airbnb-top200-mapping/Resources/Map.png)
+![Map](Resources/Map.png)
 
 
   * We are now working on the next step, which is to deploy the map online using Heroku and Flask app. We need to find a way to read in the hidden API key to be able to display the map.
