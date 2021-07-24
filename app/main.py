@@ -6,10 +6,6 @@ app = Flask(__name__)
 # Route to render index.html template using data from Mongo
 @app.route("/")
 def home():
-    params = {
-    'api_key': '{API_KEY}',
-  }
-
 
     # Return template and data
     return render_template("index.html")
