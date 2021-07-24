@@ -92,7 +92,7 @@ To get the insight view of the Boston dataset, we used Tableau Visualization met
   * Tableau Public Online version - exported data out of MongoDB into csv files (airbnb_cleansed)
   * Jupyter notebook for data cleaning
   * Tableau for visualizations - Imported data into Tableau.
-     *Created and style worksheets, dashboards, and stories in Tableau.
+     - Created and style worksheets, dashboards, and stories in Tableau.
  
 ## The interactive elements:
   * For the interactive element, we have created map to indicate top 200 listing of the Boston Airbnb and used Heroku to deploy the interactive map.
