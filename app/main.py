@@ -13,7 +13,7 @@ app = Flask(__name__)
 def home():
 
     # Return template and data
-    return render_template("index.html")
+    return render_template("index.html", API_KEY=API_KEY)
 
 if __name__ == "__main__":
     app.run(debug=True)
