@@ -4,7 +4,7 @@
 let neighborhoodLink = "../static/data/Boston_Neighborhoods.geojson";
 let listingsLink = "../static/data/listings.geojson";
 
-// Function that will determine the color of each neighborhoo
+// Function that will determine the color of each neighborhood
 function chooseColor(hood) {
   switch (hood) {
   case "Roslindale":
