@@ -1,5 +1,6 @@
-# Airbnb Price Prediction Using Machine Learning and Sentiment Analysis
+![image](https://user-images.githubusercontent.com/79486450/126399958-f9bbb4c1-9681-4a9b-b625-9116ec35f2b2.png)
 
+# Airbnb Price Prediction Using Machine Learning and Sentiment Analysis
 ## Group_6_Final_Project
 
 ---
