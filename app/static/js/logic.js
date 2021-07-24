@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 // Get API key
 const API_KEY = process.env.API_KEY;
 
