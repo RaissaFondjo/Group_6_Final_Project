@@ -17,9 +17,12 @@
 ## Dashboard:
 To get the insight view of the Boston dataset, we used Tableau Visualization method to demonstrate the findings and for the further analysis.
 
+## Tableau Visulaization:
+#### [Airbnb Price Analysis](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)
+
 • Following Tools were used:
-  * Tableau Desktop App - exported data out of MongoDB into JSON files (cleaned data)
-  * Tableau Public Online version - exported data out of MongoDB into csv files (cleaned data)
+  * Tableau Desktop App - exported data out of MongoDB into JSON files (airbnb_cleansed)
+  * Tableau Public Online version - exported data out of MongoDB into csv files (airbnb_cleansed)
   * Jupyter notebook for data cleaning
   * Tableau for visualizations - Imported data into Tableau.
      *Created and style worksheets, dashboards, and stories in Tableau.
@@ -59,5 +62,3 @@ The most popular neighborhood based on listing are Jamaica Plain, South End and 
 We can conclude that neighborhood with fewer listings have higher average listing price and neighborhood with higher listings has lower average price.
 ![Popular Neighborhood by listing count   Avg  Price](https://user-images.githubusercontent.com/79486450/126400145-8aba679f-5ff2-4d44-bdd5-1ed1d8e194c9.PNG)
 
-## Tableau Visulaization:
-#### [Airbnb Price Analysis](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)
