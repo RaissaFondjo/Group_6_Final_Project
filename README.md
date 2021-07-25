@@ -152,3 +152,35 @@ Color shows average of Price.  Size shows average of Cleaning Fee.  The marks ar
 ![Treemap - Comparative analysis of the Price](https://user-images.githubusercontent.com/79486450/126871773-b28ad731-7ecc-44f4-ba1f-db53f72babdb.png)
 
 ### Machine Learning Model:
+
+At this stage of the project, we did the following:
+- Preprocessed the raw data 
+- Performed an exploratory analysis 
+- selected features for our machine learning algorithms to predict price 
+
+In this section, I will explain my findings during this process. 
+
+**Preprocessing**
+
+With the raw data loaded into a DataFrame using PyMongo, the first step was to convert all numerical variables into int / float format for processing using `to_numeric()`. Next, we checked for nulls and decided to drop the null values since it accounted for a small percentage of our rows. Once this was done, we encoded all categorical variables into numerical values that can be read by a Machine Learning algorithm. 
+
+**Exploratory Analysis**
+
+In our exploratory analysis, we used the `describe()` method to create a statistical summary of our variables so we could assess our measures of central tendency and try to identify outliers. The next step was to use `corr()` to find variables that have a strong correlation with our target variable, price. We chose variables with a correlation coefficient above 0.20 to be used as features in our machine learning model. The following is a heatmap that shows correlation between our chosen variables: 
+
+ ![2](https://user-images.githubusercontent.com/45697471/126885894-637280d9-57ab-40b3-b765-ffc873f66c44.png)
+
+
+**Machine Learning**
+
+With preprocessing complete, and features selected, we were ready to start testing our machine learning models. Our X variables included the features shown in the correlation matrix above, and our 'y' variable was price. We split the data into training and testing sets with a random state of 45, test size of 30% and training set size of 70%. We chose three different types of regression models to predict our target variable: Random Forest Regressor, Linear Regression, and Decision Tree regression. We wanted to see how these three different models will perform, and which one of them will give us the highest R squared value. 
+
+The Random Forest Regressor algorithm is a supervised learning model that can be used for classification and, in our case, regression. We chose this algorithm as it is good at learning complex and non-linear relationships, and is easy to interpret. Limitations for this model include: chances of overfitting and may require more memory to run model. This model gave us the highest R squared value (0.56) out of all models tested, as shown below. Of course, we also utilized the simple Linear Regression supervised learning model, which is easy to implement, less complex when compared to other algorithms, and simple to interpret. Limitations for this model include: the model can be negatively affected by outliers and it could oversimplify real world problems by assuming linear relationships between variables. This model gave us an R squared value of 0.51. The final model we used was the decision tree model, which is a simpler version of the Random Forest model. We included this model as it is easy to understand and interpret, works with numerical and categorical features, and requires little data preprocessing. However, one drawback of this model is a tendency to overfit. The decision tree model gave us an R squared value of 0.47, which was the lowest of all models tested. 
+
+![3](https://user-images.githubusercontent.com/45697471/126886189-5f7ece54-cde6-49a6-b54a-4b27bb82c2db.png)
+
+As we can see, further optimization needs to be done to make our models more accurate. I plan on optimizing these models for the next segment by:
+- Dimensionality reduction by means of feature elimination or feature reduction 
+- Modifying the train, test split 
+
+In the next segment, we also plan on utilizing the comments column in our dataset to perform a sentiment analysis using NLP. 
