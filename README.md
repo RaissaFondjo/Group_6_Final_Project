@@ -166,4 +166,13 @@ With the raw data loaded into a DataFrame using PyMongo, the first step was to c
 
 **Exploratory Analysis**
 
-In our exploratory analysis, we used the `describe()` method to create a statistical summary of our variables so we could assess our measures of central tendency and try to identify outliers. The next step was to use `corr()` to find variables that have a strong correlation with our target variable, price. We chose variables with a correlation coefficient above 0.20 to
+In our exploratory analysis, we used the `describe()` method to create a statistical summary of our variables so we could assess our measures of central tendency and try to identify outliers. The next step was to use `corr()` to find variables that have a strong correlation with our target variable, price. We chose variables with a correlation coefficient above 0.20 to be used as features in our machine learning model. The following is a heatmap that shows correlation between our chosen variables: 
+
+ ![2](https://user-images.githubusercontent.com/45697471/126885894-637280d9-57ab-40b3-b765-ffc873f66c44.png)
+
+
+**Machine Learning**
+
+With preprocessing complete, and features selected, we were ready to start testing our machine learning models. Our X variables included the features shown in the correlation matrix above, and our 'y' variable was price. We split the data into training and testing sets with a random state of 45, test size of 30% and training set size of 70%. We chose three different types of regression models to predict our target variable: Random forest regressor, Linear Regression, and Decision Tree 
+
+
