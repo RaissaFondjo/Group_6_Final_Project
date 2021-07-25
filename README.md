@@ -177,4 +177,10 @@ With preprocessing complete, and features selected, we were ready to start testi
 
 The Random Forest Regressor algorithm is a supervised learning model that can be used for classification and, in our case, regression. We chose this algorithm as it is good at learning complex and non-linear relationships, and is easy to interpret. This model gave us the highest R squared value (0.56) out of all models tested, as shown below. Of course, we also utilized the simple Linear Regression supervised learning model, which is easy to implement, less complex when compared to other algorithms, and simple to interpret. This model gave us an R squared value of 0.51. The final model we used was the decision tree model, which is a simpler version of the Random Forest model. We included this model as it is easy to understand and interpret, works with numerical and categorical features, and requires little data preprocessing. The decision tree model gave us an R squared value of 0.47, which was the lowest of all models tested. 
 
+![3](https://user-images.githubusercontent.com/45697471/126886189-5f7ece54-cde6-49a6-b54a-4b27bb82c2db.png)
 
+As we can see, further optimization needs to be done to make our models more accurate. I plan on optimizing these models for the next segment by:
+- Dimensionality reduction by means of feature elimination or feature reduction 
+- Modifying the train, test split 
+
+In the next segment, we also plan on utilizing the comments column in our dataset to perform a sentiment analysis using NLP. 
