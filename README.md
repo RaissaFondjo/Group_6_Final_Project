@@ -86,7 +86,8 @@ Once the datasets are cleaned and any outliers are removed, we can use scikit-le
 To get the insight view of the Boston dataset, we used Tableau Visualization method to demonstrate the findings and for the further analysis. We also used a Navigation bar that includes tabs to Dashboards, Machine Learning and Github Repository pages. Features input where users can select from twenty-two feature dropdowns to predict rent prices. Multiple Features can be displayed at once and selected areas of the graph can be enlarged with adapting axes, And we embed a number of Tableau dashboards in the Dashboards page
 
 ### Link for the Tableau Visulaization: [Airbnb Price Analysis](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)
-### and the link to the html page deployed on github https://raissafondjo.github.io/Group_6_Final_Project/templates/index.html 
+### The website page deployed on github https://raissafondjo.github.io/Group_6_Final_Project/templates/index.html 
+### And the link to our Google Presentation https://1drv.ms/p/s!Aq1EheQjtSdDjGo4CsYz7WvhfgXD?e=A0mBpL
 
 ## Following Tools were used:
   * Tableau Desktop App - exported data out of MongoDB into JSON files (airbnb_cleansed)
