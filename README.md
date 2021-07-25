@@ -87,7 +87,7 @@ To get the insight view of the Boston dataset, we used Tableau Visualization met
 
 ### Link for the Tableau Visulaization: [Airbnb Price Analysis](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)
 ### The Website deployed on github https://raissafondjo.github.io/Group_6_Final_Project/templates/index.html 
-### And the link to our PowerPoint Presentation https://1drv.ms/p/s!Aq1EheQjtSdDjGo4CsYz7WvhfgXD?e=A0mBpL
+### And the link to our PowerPoint Presentation https://1drv.ms/p/s!Aq1EheQjtSdDjG16JEuz46iYVs-d?e=JgdjIm
 
 ## Following Tools were used:
   * Tableau Desktop App - exported data out of MongoDB into JSON files (airbnb_cleansed)
