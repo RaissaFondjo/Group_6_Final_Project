@@ -91,9 +91,10 @@ To get the insight view of the Boston dataset, we used Tableau Visualization met
 ## Following Tools were used:
   * Tableau Desktop App - exported data out of MongoDB into JSON files (airbnb_cleansed)
   * Tableau Public Online version - exported data out of MongoDB into csv files (airbnb_cleansed)
-  * Jupyter notebook for data cleaning
+  * Jupyter notebook for data cleaning and Mechine learning
   * Tableau for visualizations - Imported data into Tableau.
      - Created and style worksheets, dashboards, and stories in Tableau.
+  * Visual Studio Code for our website code (js,html,css) 
  
 ## The interactive elements:
   * An interactive map was created showing Boston neighborhoods and the top 200 listings based on `review_scores_rating`. For this, we first connected the Mongo database through `PyMongo.MongoClient` module while hiding our login credentials from uploaded code using the `getpass` function. A DataFrame was then generated with the columns we wanted to list on the map, then sorted based on score ratings before saving the data in a geojson format. 
