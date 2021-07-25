@@ -107,9 +107,11 @@ Once the datasets are cleaned and any outliers are removed, we can use scikit-le
 # Dashboard:
 To get the insight view of the Boston dataset, we used Tableau Visualization method to demonstrate the findings and for the further analysis. We also created a Website where  you can use a Navigation bar that includes tabs to Dashboards, Machine Learning and Github Repository pages. Features input where users can select from various feature dropdowns to predict rent prices, And we embed a number of Tableau dashboards in the Dashboards page
 
-### Link for the Tableau Visulaization: [Airbnb Price Analysis](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)
-### The Website deployed on github https://raissafondjo.github.io/Group_6_Final_Project/templates/index.html  ****(Work in progress)
-### And the link to our PowerPoint Presentation https://1drv.ms/p/s!Aq1EheQjtSdDjG16JEuz46iYVs-d?e=JgdjIm
+|  **Objective**  |  **Link** |  **Description**  |      
+|  :---  |  :---  |  :---  |
+|  Anlysis  |  [Tableau](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)  |  The Visual Analysis  |
+|  Website  |  [GitHub](https://raissafondjo.github.io/Group_6_Final_Project/templates/index.html)  |  The Website deployed on github (Work in progress)  |
+|  Presentation  |  [Google Slides](https://1drv.ms/p/s!Aq1EheQjtSdDjG16JEuz46iYVs-d?e=JgdjIm)  |  Google Slides for the presentation (Work in progress) |
 
 ## Following Tools were used:
   * Tableau Desktop App - exported data out of MongoDB into JSON files (airbnb_cleansed)
@@ -119,7 +121,7 @@ To get the insight view of the Boston dataset, we used Tableau Visualization met
      - Created and style worksheets, dashboards, and stories in Tableau.
   * Visual Studio Code for our website code (js,html,css) 
  
-## The interactive elements:
+## The Interactive Elements:
   * An interactive map was created showing Boston neighborhoods and the top 200 listings based on `review_scores_rating`. For this, we first connected the Mongo database through `PyMongo.MongoClient` module while hiding our login credentials from uploaded code using the `getpass` function. A DataFrame was then generated with the columns we wanted to list on the map, then sorted based on score ratings before saving the data in a geojson format. 
 
   * From the geojson file containing the longitude and latitude, a pin and popup were added to the map in JavaScript and HTML, which worked locally.
