@@ -54,6 +54,28 @@ For this project we selected Airbnb datasets from Kaggle.  The datasets contain 
 airbnb_df = pd.merge(listings_df, reviews_df, how='left', left_on=['id'], right_on=['listing_id'])
 airbnb_df.head(10)
 ```
+
+### Database - Getting the actual data:
+
+* Two datasets were used: listings2017.csv and reviews2017 (in the Resources folder).
+* They are linked by the id and listing.id of the respective sets.
+
+
+Steps used in Transforming and Loading the data were:
+
+* On examing the dataset, the team decided on which columns to keep. This was processed by opening the csv file in excel and removing the unwanted columns.
+* As shown in the AirBnB_data_transform_and_clean_script.txt file, a database and tables were created in PostgreSQL. Due to the listings dataset containing special characters in columns that we needed as numeric, the columns were created as varchar.
+* The datasets were then imported into the respective tables.
+* The AirBnB_data_transform_and_clean_script.txt file also contained all the sql for breaking out the amenities column into individual amenities, removing unwanted characters, changing column type, dropping columns no longer needed and joining the listings and review tables to get reviews. Since there were multiple reviews for about we decided to take just one review per listing (using 'distinct on'). Further, listings that did not have a review were kept.
+* The cleansed data was then exported in csv format (listings_with_reviews).
+* We created a MongoDB account, create a cluster and added all team members, so they can access the data.
+* Using MongoDB Compass to connect to the cluster, a database and collection were created and the data imported as airbnb_cleaned
+* As team members used the data, they realized that three other columns from the original listings dataset would enhance the visualization, so we repeated the steps above and included the columns. This did not take very long to do as most of the processing was in the AirBnB_data_transform_and_clean_script.txt file.
+* Using MongoDB Compass to connect to the cluster, a new database and new collection were created and the data imported as airbnb_cleansed.
+
+All related ETL and Database scripts and files are in the ETL and Database folder.
+
+
 ## Machine Learning Model:
 
   ![data-16-5-5-1-NLP-Pipeline](https://user-images.githubusercontent.com/45697471/125150334-fe76fc80-e10c-11eb-8974-252280baab95.png)
