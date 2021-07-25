@@ -83,7 +83,7 @@ Our objective in this project is to predict Airbnb rental values using the featu
 Once the datasets are cleaned and any outliers are removed, we can use scikit-learn machine library's `f_regression()` function to provide correlation scores for the features listed above. Once we have these scores, we can select features that will increase our model's accuracy and drop any features that do not have a high correlation. This will help optimize our model for predictions.
 
 # Dashboard:
-To get the insight view of the Boston dataset, we used Tableau Visualization method to demonstrate the findings and for the further analysis. We also used a Navigation bar that includes tabs to Dashboards, Machine Learning and Github Repository pages. Features input where users can select from twenty-two feature dropdowns to predict rent prices. Multiple Features can be displayed at once and selected areas of the graph can be enlarged with adapting axes, And we embed a number of Tableau dashboards in the Dashboards page
+To get the insight view of the Boston dataset, we used Tableau Visualization method to demonstrate the findings and for the further analysis. We also used a Navigation bar that includes tabs to Dashboards, Machine Learning and Github Repository pages. Features input where users can select from twenty-two feature dropdowns to predict rent prices, And we embed a number of Tableau dashboards in the Dashboards page
 
 ### Link for the Tableau Visulaization: [Airbnb Price Analysis](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)
 ### The website deployed on github https://raissafondjo.github.io/Group_6_Final_Project/templates/index.html 
