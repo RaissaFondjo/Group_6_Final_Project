@@ -1,7 +1,0 @@
-# ignore config.js file containing API
-config.js
-
-
-.ipynb_checkpoints
-
-node_modules
