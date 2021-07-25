@@ -1,0 +1,36 @@
+Listings
+-
+id int pk
+listing_url varchar
+host_response_rate int
+host_acceptance_rate int
+host_picture_url varchar
+street varchar
+neighbourhood_cleansed varchar
+latitude float
+longtitude float
+property_type varchar
+room_type varchar
+accomodates int
+bathrooms int
+bedrooms int
+beds int
+bed_type varchar
+amenities varchar
+price int
+security_deposit int
+cleaning_fee int
+extra_people int
+number_of_reviews int
+last_review date
+review_scores_rating int
+cancellation_policy varchar
+
+Reviews
+-
+listing_id int pk fk 0- Listings.id
+date date
+comments varchar
+
+QuickBDB link:
+https://app.quickdatabasediagrams.com/#/d/X7DH8A

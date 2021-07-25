@@ -73,7 +73,7 @@ Steps used in Transforming and Loading the data were:
 * As team members used the data, they realized that three other columns from the original listings dataset would enhance the visualization, so we repeated the steps above and included the columns. This did not take very long to do as most of the processing was in the AirBnB_data_transform_and_clean_script.txt file.
 * Using MongoDB Compass to connect to the cluster, a new database and new collection were created and the data imported as airbnb_cleansed.
 
-All related ETL and Database scripts and files are in the ETL and Database folder.
+All related ETL and Database scripts and files are in the ETL_and_Database folder.
 
 
 ## Machine Learning Model:
