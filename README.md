@@ -107,6 +107,7 @@ Once the datasets are cleaned and any outliers are removed, we can use scikit-le
 # Dashboard:
 To get the insight view of the Boston dataset, we used Tableau Visualization method to demonstrate the findings and for the further analysis. We also created a Website where  you can use a Navigation bar that includes tabs to Dashboards, Machine Learning and Github Repository pages. Features input where users can select from various feature dropdowns to predict rent prices, And we embed a number of Tableau dashboards in the Dashboards page
 
+<<<<<<< HEAD
 |  **Objective**  |  **Link** |  **Description**  |      
 |  :---  |  :---  |  :---  |
 |  Anlysis  |  [Tableau](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)  |  The Visual Analysis  |
