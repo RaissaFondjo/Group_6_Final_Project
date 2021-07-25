@@ -17,17 +17,26 @@
 # Dashboard:
 To get the insight view of the Boston dataset, we used Tableau Visualization method to demonstrate the findings and for the further analysis.
 
-### Link for the Tableau Visulaization: [Airbnb Price Analysis](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)
+|  **Objective**  |  **Link** |  **Description**  |      
+|  :---  |  :---  |  :---  |
+|  Anlysis  |  [Tableau](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)  |  The Visual Analysis  |
 
-## Following Tools were used:
+### Following Tools were used:
   * Tableau Desktop App - exported data out of MongoDB into JSON files (airbnb_cleansed)
   * Tableau Public Online version - exported data out of MongoDB into csv files (airbnb_cleansed)
-  * Jupyter notebook for data cleaning
+  * Jupyter notebook for data cleaning and Mechine learning
   * Tableau for visualizations - Imported data into Tableau.
-     *Created and style worksheets, dashboards, and stories in Tableau.
+     - Created and style worksheets, dashboards, and stories in Tableau.
+  * Visual Studio Code for our website code (js,html,css) 
  
-## The interactive elements:
-  * For the interactive element, we have created map to indicate top 200 listing of the Boston Airbnb and used Heroku to deploy the interactive map.
+## The Interactive Elements:
+  * An interactive map was created showing Boston neighborhoods and the top 200 listings based on `review_scores_rating`. For this, we first connected the Mongo database through `PyMongo.MongoClient` module while hiding our login credentials from uploaded code using the `getpass` function. A DataFrame was then generated with the columns we wanted to list on the map, then sorted based on score ratings before saving the data in a geojson format. 
+
+  * From the geojson file containing the longitude and latitude, a pin and popup were added to the map in JavaScript and HTML, which worked locally.
+![Map](Resources/Map.png)
+
+
+  * We are now working on the next step, which is to deploy the map online using Heroku and Flask app. We need to find a way to read in the hidden API key to be able to display the map.
   
 ## The Visual Analysis Method:
 
@@ -76,6 +85,8 @@ We wanted to identify if there is a correlation between count of Listing, Avg. R
 #### Treemap - Comparative analysis of the Price
 Color shows average of Price.  Size shows average of Cleaning Fee.  The marks are labeled by Accomodates, Bathrooms, Beds, Room Type, Property Type, Neighborhood, average of Total Fee and average of Review Scores Rating. The view is filtered on average of Total Fee, which ranges from $25 to $1,500.
 ![Treemap - Comparative analysis of the Price](https://user-images.githubusercontent.com/79486450/126871773-b28ad731-7ecc-44f4-ba1f-db53f72babdb.png)
+
+All related Dashboard scripts and files are in the [Dashboard](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Boston%20Airbnb%20Dashboard) folder.
 
 
 
