@@ -1,4 +1,4 @@
-
+console.log('Hello')
 
 // Get API key
 // require('dotenv').config()
