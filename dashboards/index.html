@@ -76,7 +76,7 @@
 <section class="data-exploration" id="exploration">
   <div class="container">
     <h1>Step 1: Data Exploration</h1>
-    <p>Since we have 81 features/descriptive variables that affect the house price, we need to explore the data and understand the data structure, data types, and the meaning of each column as well as to check if there are any missing values and duplicates.  Our dataset can be divided into 4 main groups: <span class="bolds">nominal</span>(categorical), <span class="bolds">ordinal</span>, <span class="bolds">discrete</span>, and <span class="bolds">continuous</span>. Each group is defined as below:</p>
+    <p>Since we have 61 features/descriptive variables that affect the house price, we need to explore the data and understand the data structure, data types, and the meaning of each column as well as to check if there are any missing values and duplicates.  Our dataset can be divided into 4 main groups: <span class="bolds">nominal</span>(categorical), <span class="bolds">ordinal</span>, <span class="bolds">discrete</span>, and <span class="bolds">continuous</span>. Each group is defined as below:</p>
     <p><span class="bolds">Nominal/categorical:</span> non-numerical and lack clear-cut order such as Neighborhood, Room Type, Street.</p>
     <p><span class="bolds">Ordinal:</span> categorical but have a clear cut order such as Overall Quality(10-Very Excellent, 1-Very Poor)</p>
     <p><span class="bolds">Discrete:</span> numerical data that can only take certain values such as Pool, Kitchen</p>
@@ -89,7 +89,7 @@
     <h1>Step 2: Data Cleaning Feature Selection </h1>
     <p>We started off by checking the missing value ratio and drop those columns with more than 20% of missing data.</p>
     <img src="../images/1.png">
-    <p>For simplicity reason, we divided our data into 2 categories only: categorical and numerical. Since we have 81 features, it seems more practical to select only the most relevant ones for our final model. Using heatmap from seaborn module, we were able to identify numerical variables that are highly correlated with the target: sent price. We can also order the variables based on the degree of correlation with sent price. </p>
+    <p>For simplicity reason, we divided our data into 2 categories only: categorical and numerical. Since we have 61 features, it seems more practical to select only the most relevant ones for our final model. Using heatmap from seaborn module, we were able to identify numerical variables that are highly correlated with the target: sent price. We can also order the variables based on the degree of correlation with sent price. </p>
     <img src="../images/6.png">
     <img src="../images/7.png">
   </div>
@@ -163,7 +163,7 @@
     <img src="../images/13.png">
 
     <h2>Separate the target and features variables</h2>
-    <p>Feature selection can be an important part of model selection. In supervised learning, including features in a model which do not provide information on the label is useless at best and may prevent generalization at worst. As a result, we excluded “ames_order” and “pid”. </p>
+    <p>Feature selection can be an important part of model selection. In supervised learning, including features in a model which do not provide information on the label is useless at best and may prevent generalization at worst. As a result, we excluded “_id”. </p>
     <img src="../images/14.png">
 
     <h2>Splitting dataset into training and testing sets (80/20 split)</h2>
@@ -181,7 +181,7 @@
     <img src="../images/18.png">
 
     <h2>Print the coefficients, intercept, MSE, R2 and model runtime</h2>
-    <p>we got 86% by using 8 features in our model('air_conditioning', "neighbourhood_cleansed", "accomodates", "bedrooms", "beds","cleaning_fee","room_type","security_deposit") which indicate if the user input information for the selected 8 features, we should have 86% of predicting the accurate house price. </p>
+    <p>we got 61% by using 8 features in our model('air_conditioning', "neighbourhood_cleansed", "accomodates", "bedrooms", "beds","cleaning_fee","room_type","security_deposit") which indicate if the user input information for the selected 8 features, we should have 61% of predicting the accurate house price. </p>
     <h3>Formula for our multiple linear regression model</h3>
     <img src="../images/19.png">
 
