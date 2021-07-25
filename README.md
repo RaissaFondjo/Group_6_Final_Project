@@ -76,7 +76,7 @@ Steps used in Transforming and Loading the data were:
 All related ETL and Database scripts and files are in the [ETL_and_Database](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/ETL_and_Database) folder.
 
 
-## Machine Learning Model:
+## Machine Learning Model Initiation:
 
   ![data-16-5-5-1-NLP-Pipeline](https://user-images.githubusercontent.com/45697471/125150334-fe76fc80-e10c-11eb-8974-252280baab95.png)
 
@@ -105,7 +105,7 @@ Our objective in this project is to predict Airbnb rental values using the featu
 Once the datasets are cleaned and any outliers are removed, we can use scikit-learn machine library's `f_regression()` function to provide correlation scores for the features listed above. Once we have these scores, we can select features that will increase our model's accuracy and drop any features that do not have a high correlation. This will help optimize our model for predictions.
 
 # Dashboard:
-To get the insight view of the Boston dataset, we used Tableau Visualization method to demonstrate the findings and for the further analysis. We also created a Website where  you can use a Navigation bar that includes tabs to Dashboards, Machine Learning and Github Repository pages. Features input where users can select from various feature dropdowns to predict rent prices, And we embed a number of Tableau dashboards in the Dashboards page
+To get the insight view of the Boston dataset, we used Tableau Visualization method to demonstrate the findings and for the further analysis. Furthermore, we created a website using GitHUb to present our project findings; as a navigation option we are displaying following tabs separately: Home, Dashboards, Machine Learning and GitHub Repository pages. In the Home tab we are in the process of creating Price Prediction calculator with the following features: Neighborhood, Bedroom, Quality, Room Type, Accommodate, etc. 
 
 |  **Objective**  |  **Link** |  **Description**  |      
 |  :---  |  :---  |  :---  |
@@ -178,7 +178,9 @@ We wanted to identify if there is a correlation between count of Listing, Avg. R
 Color shows average of Price.  Size shows average of Cleaning Fee.  The marks are labeled by Accomodates, Bathrooms, Beds, Room Type, Property Type, Neighborhood, average of Total Fee and average of Review Scores Rating. The view is filtered on average of Total Fee, which ranges from $25 to $1,500.
 ![Treemap - Comparative analysis of the Price](https://user-images.githubusercontent.com/79486450/126871773-b28ad731-7ecc-44f4-ba1f-db53f72babdb.png)
 
-All related Dashboard scripts and files are in the [Dashboard](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Boston%20Airbnb%20Dashboard) folder.
+Work file: [Dashboard - Tableau](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Tableau).
+Work file: [Dashboard - Website GitHub](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Website%20GitHub).
+Work file: [Dashboard Presentation - Google Slides](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20Presentation%20-%20Google%20Slides).
 
 ### Machine Learning Model:
 
