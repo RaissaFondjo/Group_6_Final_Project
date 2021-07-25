@@ -152,3 +152,18 @@ Color shows average of Price.  Size shows average of Cleaning Fee.  The marks ar
 ![Treemap - Comparative analysis of the Price](https://user-images.githubusercontent.com/79486450/126871773-b28ad731-7ecc-44f4-ba1f-db53f72babdb.png)
 
 ### Machine Learning Model:
+
+At this stage of the project, we did the following:
+- Preprocessed the raw data 
+- Performed an exploratory analysis 
+- selected features for our machine learning algorithms to predict price 
+
+In this section, I will explain my findings during this process. 
+
+**Preprocessing**
+
+With the raw data loaded into a DataFrame using PyMongo, the first step was to convert all numerical variables into int / float format for processing using `to_numeric()`. Next, we checked for nulls and decided to drop the null values since it accounted for a small percentage of our rows. Once this was done, we encoded all categorical variables into numerical values that can be read by a Machine Learning algorithm. 
+
+**Exploratory Analysis**
+
+In our exploratory analysis, we used the `describe()` method to create a statistical summary of our variables so we could assess our measures of central tendency and try to identify outliers. The next step was to use `corr()` to find variables that have a strong correlation with our target variable, price. We chose variables with a correlation coefficient above 0.20 to
