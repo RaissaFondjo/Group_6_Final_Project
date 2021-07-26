@@ -8,7 +8,6 @@ panel==0.11.3
 param==1.10.1
 python-daemon==2.1.2
 python-dateutil==2.8.1
-python-dotenv==0.18.0
 python-stack==0.1.7.11
 python-stack-cli==0.2.15.5
 stack-require==0.0.2.1
