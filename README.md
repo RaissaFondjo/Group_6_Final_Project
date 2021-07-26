@@ -73,10 +73,10 @@ Steps used in Transforming and Loading the data were:
 * As team members used the data, they realized that three other columns from the original listings dataset would enhance the visualization, so we repeated the steps above and included the columns. This did not take very long to do as most of the processing was in the AirBnB_data_transform_and_clean_script.txt file.
 * Using MongoDB Compass to connect to the cluster, a new database and new collection were created and the data imported as airbnb_cleansed.
 
-All related ETL and Database scripts and files are in the ETL_and_Database folder.
+All related ETL and Database scripts and files are in the [ETL_and_Database](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/ETL_and_Database) folder.
 
 
-## Machine Learning Model:
+## Machine Learning Model Initiation:
 
   ![data-16-5-5-1-NLP-Pipeline](https://user-images.githubusercontent.com/45697471/125150334-fe76fc80-e10c-11eb-8974-252280baab95.png)
 
@@ -105,11 +105,13 @@ Our objective in this project is to predict Airbnb rental values using the featu
 Once the datasets are cleaned and any outliers are removed, we can use scikit-learn machine library's `f_regression()` function to provide correlation scores for the features listed above. Once we have these scores, we can select features that will increase our model's accuracy and drop any features that do not have a high correlation. This will help optimize our model for predictions.
 
 # Dashboard:
-To get the insight view of the Boston dataset, we used Tableau Visualization method to demonstrate the findings and for the further analysis. We also created a Website where  you can use a Navigation bar that includes tabs to Dashboards, Machine Learning and Github Repository pages. Features input where users can select from various feature dropdowns to predict rent prices, And we embed a number of Tableau dashboards in the Dashboards page
+To get the insight view of the Boston dataset, we used Tableau Visualization method to demonstrate the findings and for the further analysis. Furthermore, we created a website using GitHUb to present our project findings; as a navigation option we are displaying following tabs separately: Home, Dashboards, Machine Learning and GitHub Repository pages. In the Home tab we are in the process of creating Price Prediction calculator with the following features: Neighborhood, Bedroom, Quality, Room Type, Accommodate, etc. 
 
-### Link for the Tableau Visulaization: [Airbnb Price Analysis](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)
-### The Website deployed on github https://raissafondjo.github.io/Group_6_Final_Project/templates/index.html 
-### And the link to our PowerPoint Presentation https://1drv.ms/p/s!Aq1EheQjtSdDjG16JEuz46iYVs-d?e=JgdjIm
+|  **Objective**  |  **Link** |  **Description**  |      
+|  :---  |  :---  |  :---  |
+|  Anlysis  |  [Tableau](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)  |  The Visual Analysis  |
+|  Website  |  [GitHub](https://raissafondjo.github.io/Group_6_Final_Project/templates/index.html)  |  The Website deployed on github (Work in progress)  |
+|  Presentation  |  [Google Slides](https://1drv.ms/p/s!Aq1EheQjtSdDjG16JEuz46iYVs-d?e=JgdjIm)  |  Google Slides for the presentation (Work in progress) |
 
 ## Following Tools were used:
   * Tableau Desktop App - exported data out of MongoDB into JSON files (airbnb_cleansed)
@@ -119,7 +121,7 @@ To get the insight view of the Boston dataset, we used Tableau Visualization met
      - Created and style worksheets, dashboards, and stories in Tableau.
   * Visual Studio Code for our website code (js,html,css) 
  
-## The interactive elements:
+## The Interactive Elements:
   * An interactive map was created showing Boston neighborhoods and the top 200 listings based on `review_scores_rating`. For this, we first connected the Mongo database through `PyMongo.MongoClient` module while hiding our login credentials from uploaded code using the `getpass` function. A DataFrame was then generated with the columns we wanted to list on the map, then sorted based on score ratings before saving the data in a geojson format. 
 
   * From the geojson file containing the longitude and latitude, a pin and popup were added to the map in JavaScript and HTML, which worked locally.
@@ -176,6 +178,10 @@ We wanted to identify if there is a correlation between count of Listing, Avg. R
 Color shows average of Price.  Size shows average of Cleaning Fee.  The marks are labeled by Accomodates, Bathrooms, Beds, Room Type, Property Type, Neighborhood, average of Total Fee and average of Review Scores Rating. The view is filtered on average of Total Fee, which ranges from $25 to $1,500.
 ![Treemap - Comparative analysis of the Price](https://user-images.githubusercontent.com/79486450/126871773-b28ad731-7ecc-44f4-ba1f-db53f72babdb.png)
 
+Work file: [Dashboard - Tableau](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Tableau).
+Work file: [Dashboard - Website GitHub](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Website%20GitHub).
+Work file: [Dashboard Presentation - Google Slides](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20Presentation%20-%20Google%20Slides).
+
 ### Machine Learning Model:
 
 At this stage of the project, we did the following:
@@ -209,3 +215,5 @@ As we can see, further optimization needs to be done to make our models more acc
 - Modifying the train, test split 
 
 In the next segment, we also plan on utilizing the comments column in our dataset to perform a sentiment analysis using NLP. 
+
+All related Machine Learning scripts and files are in the [Machine_Learning](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Machine_Learning) folder.
