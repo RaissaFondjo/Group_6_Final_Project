@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@humanwhocodes/env": "^2.2.0",
     "dotenv": "^10.0.0",
     "node": "16.5.0",
     "node-require": "0.0.10",
@@ -9,10 +10,16 @@
   "description": "![image](https://user-images.githubusercontent.com/79486450/126399958-f9bbb4c1-9681-4a9b-b625-9116ec35f2b2.png)",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "env-cmd ./config/dev.env nodemon src/index.js"
+  },
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Pascalduc/Group_6_Final_Project.git"
@@ -23,5 +30,9 @@
   "bugs": {
     "url": "https://github.com/Pascalduc/Group_6_Final_Project/issues"
   },
-  "homepage": "https://github.com/Pascalduc/Group_6_Final_Project#readme"
+  "homepage": "https://github.com/Pascalduc/Group_6_Final_Project#readme",
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  }
+  
 }
