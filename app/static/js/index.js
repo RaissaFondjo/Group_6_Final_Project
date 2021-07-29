@@ -1,6 +1,6 @@
 // Get API key
-
-node.require("dotenv").config();
+importScripts("require")
+require("dotenv").config();
 const API_KEY = process.env.API_KEY;
 
 
