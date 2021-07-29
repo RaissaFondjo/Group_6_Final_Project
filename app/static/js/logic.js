@@ -3,7 +3,6 @@
 const API_KEY = process.env.API_KEY;
 
 
-
 // Store our API endpoint inside queryUrl
 let neighborhoodLink = "../static/data/Boston_Neighborhoods.geojson";
 let listingsLink = "../static/data/listings.geojson";
