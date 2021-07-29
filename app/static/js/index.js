@@ -1,8 +1,8 @@
 // Get API key
 
 // require("dotenv").config();
-const API_KEY = process.env["apikey"];
-console.log(API_KEY)
+// const API_KEY = process.env.apikey;
+// console.log(API_KEY)
 
 // Store our API endpoint inside queryUrl
 let neighborhoodLink = "../static/data/Boston_Neighborhoods.geojson";
@@ -135,14 +135,14 @@ function createMap(neighborhoods) {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox/streets-v11',
-    accessToken: API_KEY
+    accessToken: pk.eyJ1IjoicGFzY2FsZHVjIiwiYSI6ImNrcm85M21mYjA3ZXkyb213OXQ5a2Q1MXMifQ.BSQlwIydniclM3r6lVwz7g
   });
 
   let darkmap = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox/dark-v10',
-    accessToken: API_KEY
+    accessToken: pk.eyJ1IjoicGFzY2FsZHVjIiwiYSI6ImNrcm85M21mYjA3ZXkyb213OXQ5a2Q1MXMifQ.BSQlwIydniclM3r6lVwz7g
   });
 
   // Define a baseMaps object to hold our base layers
