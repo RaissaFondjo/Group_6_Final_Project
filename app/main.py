@@ -11,8 +11,8 @@ app = Flask(__name__)
 # app.config['API_KEY'] = os.environ.get("API_KEY")
 
 
-# from boto.s3.connection import S3Connection
-# s3 = S3Connection(os.environ['API_KEY'], os.environ['API_KEY'])
+from boto.s3.connection import S3Connection
+s3 = S3Connection(os.environ['apikey'], os.environ['apikey'])
 
 # Route to render index.html template using data from Mongo
 @app.route("/")
