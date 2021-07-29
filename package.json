@@ -3,6 +3,6 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "npm": "7.20.2",
-    "require": "2.4.20"
+    "node-require": "0.0.10"
   }
 }
