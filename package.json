@@ -10,16 +10,9 @@
   "description": "![image](https://user-images.githubusercontent.com/79486450/126399958-f9bbb4c1-9681-4a9b-b625-9116ec35f2b2.png)",
   "version": "1.0.0",
   "main": "index.js",
-
-  "scripts": {
-    "start": "node src/index.js",
-    "dev": "env-cmd ./config/dev.env nodemon src/index.js"
-  },
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Pascalduc/Group_6_Final_Project.git"
@@ -34,5 +27,4 @@
   "devDependencies": {
     "env-cmd": "^10.1.0"
   }
-  
 }
