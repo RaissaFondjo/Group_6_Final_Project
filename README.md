@@ -183,4 +183,6 @@ As we can see, further optimization needs to be done to make our models more acc
 - Dimensionality reduction by means of feature elimination or feature reduction 
 - Modifying the train, test split 
 
-In the next segment, we also plan on utilizing the comments column in our dataset to perform a sentiment analysis using NLP. 
+**Model Optimization**
+
+
