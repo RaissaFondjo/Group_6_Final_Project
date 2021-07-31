@@ -1,0 +1,14 @@
+Flask==2.0
+geojson==2.5.0
+gunicorn==20.1.0
+ipython==7.22.0
+json5==0.9.5
+node==0.9.26
+panel==0.11.3
+param==1.10.1
+python-daemon==2.1.2
+python-dateutil==2.8.1
+python-stack==0.1.7.11
+python-stack-cli==0.2.15.5
+stack-require==0.0.2.1
+stack-scaffold==0.0.2b1

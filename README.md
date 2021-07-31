@@ -1,5 +1,6 @@
-# Airbnb Price Prediction Using Machine Learning and Sentiment Analysis
+![image](https://user-images.githubusercontent.com/79486450/126399958-f9bbb4c1-9681-4a9b-b625-9116ec35f2b2.png)
 
+# Airbnb Price Prediction Using Machine Learning and Sentiment Analysis
 ## Group_6_Final_Project
 
 ---
@@ -8,11 +9,11 @@
 
 |  **Member**  |  **Role**  |  **Responsibilities**  |                                            
 |  :---  |  :---  |  :---  |
-| [Syed Ahmed](https://github.com/ahmed17777)  |  Machine Learning Lead  |  Manage the Database and ETL Process  |
-| [Pascal Duscesneau](https://github.com/Pascalduc)  |  GitHub Lead  |  Manage the GitHub Repository  |
-| [Raissa Fondjo]( https://github.com/RaissaFondjo)  |  Dashboard Lead  |  Manage the Presentation Dashboard  |
-| [Geetha Shanthibushan](https://github.com/gshanthibushan)  |  Project Coordinator  |  Manage the Technologies and tracking group ideas, decisions, and progress  |
-| [Lalchand Shivraj](https://github.com/LalchandShivraj)  |  Dashboard Lead  |  Manage the Machine Learning Model and Design  |
+| [Syed Ahmed](https://github.com/ahmed17777)  |  Machine Learning Lead  |  Manage the Machine Learning Model and Design  |
+| [Pascal Duchesneau](https://github.com/Pascalduc)  |  GitHub Lead  |  Manage the GitHub Repository, Designed Interactive element, Heroku |
+| [Raissa Fondjo]( https://github.com/RaissaFondjo)  |  Dashboard Lead  |  Manage the Presentation Google slides & Designed Mock-up Dashboard  |
+| [Geetha Shanthibushan](https://github.com/gshanthibushan)  |  Project Coordinator  |  Manage the Technologies and tracking group ideas, decisions, progress, and Designed Tableau Dashboard Presentation  |
+| [Lalchand Shivraj](https://github.com/LalchandShivraj)  |  Database Lead  | Manage the Database and ETL Process  |
  
 Even though we have assigned role to each team member, the members will and to contribute equally throughout the final project.
 
@@ -21,7 +22,7 @@ Even though we have assigned role to each team member, the members will and to c
 ## Overview: 
 Estimating a price for short time stay lodging is a difficult task for the hosts when it comes to listing the property in Airbnb.  In addition, customers select rental based on price, review, and picture of the property, but the property may not live up to its listing.   Therefore, our team decided to develop a price prediction model using machine learning and one of natural language processing technique of, sentiment analysis.  
 
-For this project we selected Airbnb datasets from Kaggle.  The datasets contains information about the city of Boston, MA Airbnb properties listings and customer’s reviews of these properties.  
+For this project we selected Airbnb datasets from Kaggle.  The datasets contain information about the city of Boston, MA Airbnb properties listings and customer’s reviews of these properties.  
 
 ## Source of Data: 
 
@@ -32,24 +33,46 @@ For this project we selected Airbnb datasets from Kaggle.  The datasets contains
 |  Kaggle  |  https://www.kaggle.com/airbnb/boston  |  Calendar.csv, including listing id and the price and availability for that day  |
 
 
-## Questions that we want answer with the data: 
-- What are the key factors that effect the price of the rental property? 
+## Questions we want to answer with the data: 
+- What are the key factors that affect the price of the rental property? 
     - We wanted to identify if the following key feature drive the price of the property: Neighborhood (Location), Competitor’s prices, Special Amenities, consumers’ reviews, and opinions.
     
-- Within the same neighborhood what make a customer to select one vs another property?
+- Within the same neighborhood what make a customer selecting one property vs another?
     - We wanted to identify if there is a correlation between reviews and # of times certain property being rent out.
     
 - Which neighborhoods in Boston have the highest rental prices?
     - Reason behind the high price.
 
-## Database ERD:
 
-•	PostgresSQL is used to store and manipulate data. The image below represents the tables of data that are uploaded onto the database in Postgres. The entity relational diagram allows for easier joining of tables with SQL and is a helpful reference while importing data into the database. There are two main tables with data that is used to build and perform the machine learning model.
-•	The most common and obvious connect between the two datasets is the ID column.
+* A sample code to merge the two tables can be found in the Jupyter Notebook file `AirBnB.ipynb`.
 
-![ERD-Air_BandB](https://user-images.githubusercontent.com/78666055/125123343-8b499800-e0c4-11eb-8a4d-483298cb137a.png)
+```
+airbnb_df = pd.merge(listings_df, reviews_df, how='left', left_on=['id'], right_on=['listing_id'])
+airbnb_df.head(10)
+```
 
-## Machine Learning Model:
+### Database - Getting the actual data:
+
+* Two datasets were used: listings2017.csv and reviews2017 (in the Resources folder).
+* They are linked by the id and listing.id of the respective sets.
+
+
+Steps used in Transforming and Loading the data were:
+
+* On examing the dataset, the team decided on which columns to keep. This was processed by opening the csv file in excel and removing the unwanted columns.
+* As shown in the AirBnB_data_transform_and_clean_script.txt file, a database and tables were created in PostgreSQL. Due to the listings dataset containing special characters in columns that we needed as numeric, the columns were created as varchar.
+* The datasets were then imported into the respective tables.
+* The AirBnB_data_transform_and_clean_script.txt file also contained all the sql for breaking out the amenities column into individual amenities, removing unwanted characters, changing column type, dropping columns no longer needed and joining the listings and review tables to get reviews. Since there were multiple reviews for about we decided to take just one review per listing (using 'distinct on'). Further, listings that did not have a review were kept.
+* The cleansed data was then exported in csv format (listings_with_reviews).
+* We created a MongoDB account, create a cluster and added all team members, so they can access the data.
+* Using MongoDB Compass to connect to the cluster, a database and collection were created and the data imported as airbnb_cleaned
+* As team members used the data, they realized that three other columns from the original listings dataset would enhance the visualization, so we repeated the steps above and included the columns. This did not take very long to do as most of the processing was in the AirBnB_data_transform_and_clean_script.txt file.
+* Using MongoDB Compass to connect to the cluster, a new database and new collection were created and the data imported as airbnb_cleansed.
+
+All related ETL and Database scripts and files are in the [ETL_and_Database](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/ETL_and_Database) folder.
+
+
+## Machine Learning Model Initiation:
 
   ![data-16-5-5-1-NLP-Pipeline](https://user-images.githubusercontent.com/45697471/125150334-fe76fc80-e10c-11eb-8974-252280baab95.png)
 
@@ -74,18 +97,4 @@ Our objective in this project is to predict Airbnb rental values using the featu
 - `last_review`
 - `review_scores_rating`
 - `cancellation_policy`
-
-Once the datasets are cleaned and any outliers are removed, we can use scikit-learn machine library's `f_regression()` function to provide correlation scores for the features listed above. Once we have these scores, we can select features that will increase our model's accuracy and drop any features that do not have a high correlation. This will help optimize our model for predictions. 
-
-## Dashboard:
-
-We will be using Tableau to create final dashboards. It will be directly tied to our Postgres database via a direct connection.
-
-•	The interactive elements we use include:
-1. Navigation bar: includes tabs to Dashboards, Machine Learning and Github Repository pages
-2. Features input: where users can select from twenty-two feature dropdowns to predict rent prices. Multiple Features can be displayed at once and selected areas of the graph can be enlarged with adapting axes.
-3. Tableau dashboards: we will embed a number of Tableau dashboards in the Dashboards page
-
-### link to the Tableau Dashboard
-https://public.tableau.com/authoring/BostonAirbnbRentPricesDataExploration/Numberoflistings/Dashboard%201#1. Where we will show our different interactive data visualizations one of them is the Correlation Between Rent Prices And Each Features. 
 
