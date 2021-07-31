@@ -217,3 +217,4 @@ As we can see, further optimization needs to be done to make our models more acc
 In the next segment, we also plan on utilizing the comments column in our dataset to perform a sentiment analysis using NLP. 
 
 All related Machine Learning scripts and files are in the [Machine_Learning](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Machine_Learning) folder.
+
