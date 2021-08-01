@@ -211,8 +211,3 @@ The Random Forest Regressor algorithm is a supervised learning model that can be
 As we can see, further optimization needs to be done to make our models more accurate. I plan on optimizing these models for the next segment by:
 - Dimensionality reduction by means of feature elimination or feature reduction 
 - Modifying the train, test split 
-
-In the next segment, we also plan on utilizing the comments column in our dataset to perform a sentiment analysis using NLP. 
-
-All related Machine Learning scripts and files are in the [Machine_Learning](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Machine_Learning) folder.
-
