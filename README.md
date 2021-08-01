@@ -1,5 +1,3 @@
-![image](https://user-images.githubusercontent.com/79486450/126399958-f9bbb4c1-9681-4a9b-b625-9116ec35f2b2.png)
-
 # Airbnb Price Prediction Using Machine Learning and Sentiment Analysis
 ## Group_6_Final_Project
 
@@ -46,7 +44,7 @@ For this project we selected Airbnb datasets from Kaggle.  The datasets contain 
 ## Database ERD:
 * PostgresSQL is used to store and manipulate data. The image below represents the tables of data that are uploaded onto the database in Postgres. The entity relational diagram allows for easier joining of tables with SQL and is a helpful reference while importing data into the database. There are two main tables with data that is used to build and perform the machine learning model. 
 * The most common and obvious connect between the two datasets is the ID column.
-![ERD-Air_BandB](https://user-images.githubusercontent.com/78666055/125123343-8b499800-e0c4-11eb-8a4d-483298cb137a.png)
+![ERD_Air_BnB](https://user-images.githubusercontent.com/78666055/127744783-db7c1b33-212c-4dd1-9db6-4aaf8a27d0d3.png)
 
 * A sample code to merge the two tables can be found in the Jupyter Notebook file `AirBnB.ipynb`.
 
@@ -54,7 +52,29 @@ For this project we selected Airbnb datasets from Kaggle.  The datasets contain 
 airbnb_df = pd.merge(listings_df, reviews_df, how='left', left_on=['id'], right_on=['listing_id'])
 airbnb_df.head(10)
 ```
-## Machine Learning Model:
+
+### Database - Getting the actual data:
+
+* Two datasets were used: listings2017.csv and reviews2017 (in the Resources folder).
+* They are linked by the id and listing.id of the respective sets.
+
+
+Steps used in Transforming and Loading the data were:
+
+* On examing the dataset, the team decided on which columns to keep. This was processed by opening the csv file in excel and removing the unwanted columns.
+* As shown in the AirBnB_data_transform_and_clean_script.txt file, a database and tables were created in PostgreSQL. Due to the listings dataset containing special characters in columns that we needed as numeric, the columns were created as varchar.
+* The datasets were then imported into the respective tables.
+* The AirBnB_data_transform_and_clean_script.txt file also contained all the sql for breaking out the amenities column into individual amenities, removing unwanted characters, changing column type, dropping columns no longer needed and joining the listings and review tables to get reviews. Since there were multiple reviews for about we decided to take just one review per listing (using 'distinct on'). Further, listings that did not have a review were kept.
+* The cleansed data was then exported in csv format (listings_with_reviews).
+* We created a MongoDB account, create a cluster and added all team members, so they can access the data.
+* Using MongoDB Compass to connect to the cluster, a database and collection were created and the data imported as airbnb_cleaned
+* As team members used the data, they realized that three other columns from the original listings dataset would enhance the visualization, so we repeated the steps above and included the columns. This did not take very long to do as most of the processing was in the AirBnB_data_transform_and_clean_script.txt file.
+* Using MongoDB Compass to connect to the cluster, a new database and new collection were created and the data imported as airbnb_cleansed.
+
+All related ETL and Database scripts and files are in the [ETL_and_Database](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/ETL_and_Database) folder.
+
+
+## Machine Learning Model Initiation:
 
   ![data-16-5-5-1-NLP-Pipeline](https://user-images.githubusercontent.com/45697471/125150334-fe76fc80-e10c-11eb-8974-252280baab95.png)
 
@@ -83,18 +103,23 @@ Our objective in this project is to predict Airbnb rental values using the featu
 Once the datasets are cleaned and any outliers are removed, we can use scikit-learn machine library's `f_regression()` function to provide correlation scores for the features listed above. Once we have these scores, we can select features that will increase our model's accuracy and drop any features that do not have a high correlation. This will help optimize our model for predictions.
 
 # Dashboard:
-To get the insight view of the Boston dataset, we used Tableau Visualization method to demonstrate the findings and for the further analysis.
+To get the insight view of the Boston dataset, we used Tableau Visualization method to demonstrate the findings and for the further analysis. Furthermore, we created a website using GitHUb to present our project findings; as a navigation option we are displaying following tabs separately: Home, Dashboards, Machine Learning and GitHub Repository pages. In the Home tab we are in the process of creating Price Prediction calculator with the following features: Neighborhood, Bedroom, Quality, Room Type, Accommodate, etc. 
 
-### Link for the Tableau Visulaization: [Airbnb Price Analysis](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)
+|  **Objective**  |  **Link** |  **Description**  |      
+|  :---  |  :---  |  :---  |
+|  Anlysis  |  [Tableau](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)  |  The Visual Analysis  |
+|  Website  |  [GitHub](https://raissafondjo.github.io/Group_6_Final_Project/templates/index.html)  |  The Website deployed on github (Work in progress)  |
+|  Presentation  |  [Google Slides](https://1drv.ms/p/s!Aq1EheQjtSdDjG16JEuz46iYVs-d?e=JgdjIm)  |  Google Slides for the presentation (Work in progress) |
 
 ## Following Tools were used:
   * Tableau Desktop App - exported data out of MongoDB into JSON files (airbnb_cleansed)
   * Tableau Public Online version - exported data out of MongoDB into csv files (airbnb_cleansed)
-  * Jupyter notebook for data cleaning
+  * Jupyter notebook for data cleaning and Mechine learning
   * Tableau for visualizations - Imported data into Tableau.
      - Created and style worksheets, dashboards, and stories in Tableau.
+  * Visual Studio Code for our website code (js,html,css) 
  
-## The interactive elements:
+## The Interactive Elements:
   * An interactive map was created showing Boston neighborhoods and the top 200 listings based on `review_scores_rating`. For this, we first connected the Mongo database through `PyMongo.MongoClient` module while hiding our login credentials from uploaded code using the `getpass` function. A DataFrame was then generated with the columns we wanted to list on the map, then sorted based on score ratings before saving the data in a geojson format. 
 
   * From the geojson file containing the longitude and latitude, a pin and popup were added to the map in JavaScript and HTML, which worked locally.
@@ -151,6 +176,10 @@ We wanted to identify if there is a correlation between count of Listing, Avg. R
 Color shows average of Price.  Size shows average of Cleaning Fee.  The marks are labeled by Accomodates, Bathrooms, Beds, Room Type, Property Type, Neighborhood, average of Total Fee and average of Review Scores Rating. The view is filtered on average of Total Fee, which ranges from $25 to $1,500.
 ![Treemap - Comparative analysis of the Price](https://user-images.githubusercontent.com/79486450/126871773-b28ad731-7ecc-44f4-ba1f-db53f72babdb.png)
 
+Work file: [Dashboard - Tableau](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Tableau).
+Work file: [Dashboard - Website GitHub](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Website%20GitHub).
+Work file: [Dashboard Presentation - Google Slides](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20Presentation%20-%20Google%20Slides).
+
 ### Machine Learning Model:
 
 At this stage of the project, we did the following:
@@ -182,7 +211,3 @@ The Random Forest Regressor algorithm is a supervised learning model that can be
 As we can see, further optimization needs to be done to make our models more accurate. I plan on optimizing these models for the next segment by:
 - Dimensionality reduction by means of feature elimination or feature reduction 
 - Modifying the train, test split 
-
-**Model Optimization**
-
-Since the previous segment, we have worked on optimizing the machine learning model to boost R squared scores for each model. We did so by reselecting appropriate features from the dataset and removing outliers that were present in the target variable. We have also added a Deep Learning Model with two hidden layers. The final 
