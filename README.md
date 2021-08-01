@@ -185,4 +185,4 @@ As we can see, further optimization needs to be done to make our models more acc
 
 **Model Optimization**
 
-
+Since the previous segment, we have worked on optimizing the machine learning model to boost R squared scores for each model. We did so by reselecting appropriate features from the dataset and removing outliers that were present in the target variable. We have also added a Deep Learning Model with two hidden layers. The final 
