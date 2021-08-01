@@ -76,10 +76,7 @@ All related ETL and Database scripts and files are in the [ETL_and_Database](htt
 
 ## Machine Learning Model Initiation:
 
-  ![data-16-5-5-1-NLP-Pipeline](https://user-images.githubusercontent.com/45697471/125150334-fe76fc80-e10c-11eb-8974-252280baab95.png)
-
-
-Our objective in this project is to predict Airbnb rental values using the features given in our dataset. We plan to do this by conducting a sentiment analysis using data about comments from `reviews2017.csv`, and feeding it to an NLP pipeline like the one shown above so that it can be used for machine learning, as well as taking variables from `listings2017.csv` to perform a multiple linear regression using the **sklearn** library. Therefore we will have two models: a linear regression model that uses customer sentiment to predict price, and a multiple linear regression model that uses variables from the `listings2017.csv` file. With our target variable being `price`, here are the features we have selected for the regression model: 
+Our objective in this project is to predict Airbnb rental values using the features given in our dataset. We plan to do this by taking variables from `listings2017.csv` to perform a multiple linear regression using the **sklearn** library. In the end, we will have two models: a linear regression model that uses customer sentiment to predict price, and a multiple linear regression model that uses variables from the `listings2017.csv` file. With our target variable being `price`, here are the features we have selected for the regression model: 
 
 - `host_response_rate`
 - `host_acceptance_rate`
