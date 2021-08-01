@@ -158,7 +158,7 @@ To get the insight view of the Boston dataset, we used Tableau Visualization met
 |  Anlysis  |  [Tableau](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)  |  The Visual Analysis  |
 |  The Interactive Elements |  [Heroku](https://airbnb-top200-mapping.herokuapp.com/)  |  Boston neighborhoods and the top 200 listings  |
 |  Website  |  [GitHub](https://raissafondjo.github.io/Group_6_Final_Project/templates/index.html)  |  The Website deployed on github (Work in progress)  |
-|  Presentation  |  [Google Slides](https://1drv.ms/p/s!Aq1EheQjtSdDjG16JEuz46iYVs-d?e=JgdjIm)  |  Google Slides for the presentation (Work in progress) |
+|  Presentation  |  [Google Slides](https://docs.google.com/presentation/d/1aEzAcnQPQ26Mgu3uyPxv9UKH1f7kKL-D-o2jjF8_G2g/edit?usp=sharing)  |  Google Slides for the presentation (Work in progress) |
 
 ## Following Tools were used:
   * Tableau Desktop App - exported data out of MongoDB into JSON files (airbnb_cleansed)
