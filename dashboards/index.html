@@ -26,7 +26,10 @@
       <a class="nav-link active" href="#Preprocessed-the-raw-data">Preprocessed The Raw Data</a>
       <a class="nav-link" href="#exploration">Exploratory Analysis</a>
       <a class="nav-link" href="#selection">Features Selection </a>
- 
+      <a class="nav-link" href="#Model-Optimization">Model Optimization</a>
+      <a class="nav-link" href="#Deep-Learning-Model">Deep Learning Model</a>
+      <a class="nav-link" href="#Final-Results">Final Results</a>
+        
       
     </div>
   </div>
@@ -64,7 +67,9 @@
         <li><p>Step 1: Preprocessed The Raw Data</p></li>
         <li><p>Step 2: Performed an exploratory analysis</p></li>
         <li><p>Step 3: Features Selection</p></li>
- 
+        <li><p>Step 4: Model Optimization</p></li>
+        <li><p>Step 5: Deep Learning Model</p></li> 
+        <li><p>Step 6: Final Results</p></li> 
       </ul>
   </div>
 </section>
@@ -74,7 +79,7 @@
     <h1>Step 1:  Preprocessed The Raw Data</h1>
     <p>With the raw data loaded into a DataFrame using PyMongo, the first step was to convert all numerical variables into int / float format for processing using to_numeric(). Next, we checked for nulls and decided to drop the null values since it accounted for a small percentage of our rows. Once this was done, we encoded all categorical variables into numerical values that can be read by a Machine Learning algorithm.</p>
     <img src="../images/9.png">
-   </div>
+  </div>
 </section>
 
 <section class="data-exploration" id="exploration">
@@ -101,9 +106,54 @@
    </div>
 </section>
 
+<section class="Model-Optimization" id="Model Optimization">
+  <div class="container">
+    <h1>Step 4:Model Optimization</h1>
 
+    <p>Since the previous segment, we have worked on optimizing the machine learning model to boost R squared scores for each model. We did so by reselecting appropriate features from the dataset, changing the train test split to 67%, 33% respectively and removing outliers that were present in the target variable. We have also added a Deep Learning Model with two hidden layers. The final feature selection for our machine learning (based on correlation coefficients) models is as follows:</p>
+    <ul>
+      <li><p>room_type</p></li>
+      <li><p>accomodates</p></li>
+      <li><p>bathrooms</p></li>
+      <li><p>bedrooms</p></li>
+      <li><p>beds</p></li>
+      <li><p>price</p></li>
+      <li><p>security_deposit</p></li>
+      <li><p>cleaning_fee</p></li>
+      <li><p>air_conditioning</p></li>
+      <li><p>family_kid_friendly</p></li>
+      <li><p>elevator</p></li>
+     </ul>
+   <p>As we can see from the image below, there were outliers present in the price distribution which were giving the data a right skew. As we can see from the statistical summary, most of the samples from the price column are within the range of $215 and few samples that are less than $20 and greater than $500. </p>
+   <img src="../images/10.png">
+   <p>We ruled these ranges as outliers and removed them from the price distribution, which gave us a more normal looking distribution as seen below.</p>
+   <img src="../images/11.png">
+      
+  </div>
+</section>
 
+<section class="Deep-Learning-Model" id="Deep Learning Model">
+  <div class="container">
+    <h1>Step 5:  Deep Learning Model</h1>
+    <p>In addition to our model optimization efforts, we added a Deep Learning model. They are useful because their structure of layers can be adapted to many types of problems, and their hidden layers reduce the need for feature engineering. One weakeness of this model is that they are computationally intensive to train. </p>
+  </div>
+</section>
 
+<section class="Final-Results" id="Final Results">
+  <div class="container">
+    <h1>Step 6:  Final Results</h1>
+    <p>Here is a chart comparing the R squared value of all the optimized models. </p>
+    <img src="../images/12.png">
+     <ul>     
+      <li><p>Random Forest R Square Value : 0.6401468962074119</p></li>
+      <li><p>Deep Learning R Square Value : 0.5832696557887808</p></li>
+      <li><p>Decision Tree R Square Value : 0.5747005190100378</p></li>
+      <li><p>Linear Regression R Square Value : 0.5567145646136205</p></li> 
+     </ul>
+
+  </div>
+</section>    
+    
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
