@@ -228,3 +228,8 @@ Color shows average of Price.  Size shows average of Cleaning Fee.  The marks ar
 * Work file: [Dashboard - Tableau](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Tableau).
 * Work file: [Dashboard - Website GitHub](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Website%20GitHub).
 * Work file: [Dashboard Presentation - Google Slides](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20Presentation%20-%20Google%20Slides).
+
+
+## Result of analysis
+## Recommendation for future analysis
+## Anything the team would have done differently
