@@ -1,0 +1,11 @@
+# ignore config.js file containing API
+config.js
+
+# Jupyter notebook checkpoint
+.ipynb_checkpoints
+
+# Environment variables
+# .env
+
+# Node modules
+node_modules
