@@ -76,10 +76,7 @@ All related ETL and Database scripts and files are in the [ETL_and_Database](htt
 
 ## Machine Learning Model Initiation:
 
-  ![data-16-5-5-1-NLP-Pipeline](https://user-images.githubusercontent.com/45697471/125150334-fe76fc80-e10c-11eb-8974-252280baab95.png)
-
-
-Our objective in this project is to predict Airbnb rental values using the features given in our dataset. We plan to do this by conducting a sentiment analysis using data about comments from `reviews2017.csv`, and feeding it to an NLP pipeline like the one shown above so that it can be used for machine learning, as well as taking variables from `listings2017.csv` to perform a multiple linear regression using the **sklearn** library. Therefore we will have two models: a linear regression model that uses customer sentiment to predict price, and a multiple linear regression model that uses variables from the `listings2017.csv` file. With our target variable being `price`, here are the features we have selected for the regression model: 
+Our objective in this project is to predict Airbnb rental values using the features given in our dataset. We plan to do this by taking variables from `listings2017.csv` to perform a multiple linear regression using the **sklearn** library. In the end, we will have two models: a linear regression model that uses customer sentiment to predict price, and a multiple linear regression model that uses variables from the `listings2017.csv` file. With our target variable being `price`, here are the features we have selected for the regression model: 
 
 - `host_response_rate`
 - `host_acceptance_rate`
@@ -211,3 +208,45 @@ The Random Forest Regressor algorithm is a supervised learning model that can be
 As we can see, further optimization needs to be done to make our models more accurate. I plan on optimizing these models for the next segment by:
 - Dimensionality reduction by means of feature elimination or feature reduction 
 - Modifying the train, test split 
+
+**Model Optimization**
+
+Since the previous segment, we have worked on optimizing the machine learning model to boost R squared scores for each model. We did so by reselecting appropriate features from the dataset, changing the train test split to 67%, 33% respectively and removing outliers that were present in the target variable. We have also added a Deep Learning Model with two hidden layers. The final feature selection for our machine learning (based on correlation coefficients) models is as follows: 
+
+- `room_type`
+- `accomodates`
+- `bathrooms`
+- `bedrooms`
+- `beds`
+- `price`
+- `security_deposit`
+- `cleaning_fee`
+- `air_conditioning`
+- `cable_tv`
+- `family_kid_friendly`
+- `gym`
+- `elevator`
+
+As we can see from the image below, there were outliers present in the price distribution which were giving the data a right skew. As we can see from the statistical summary, most of the samples from the price column are within the range of $215 and few samples that are less than $20 and greater than $500. 
+
+![2](https://user-images.githubusercontent.com/45697471/127755408-1b1599a2-fd49-4d5b-accb-c1ab8684162f.png)
+
+We ruled these ranges as outliers and removed them from the price distribution, which gave us a more normal looking distribution as seen below. 
+
+![3](https://user-images.githubusercontent.com/45697471/127755410-37bb2239-4529-4ee4-9e65-368b1febcbb8.png)
+
+**Deep Learning Model**
+
+In addition to our model optimization efforts, we added a Deep Learning model. They are useful because their structure of layers can be adapted to many types of problems, and their hidden layers reduce the need for feature engineering. One weakeness of this model is that they are computationally intensive to train. 
+
+**Final Results**
+
+Here is a chart comparing the R squared value of all the optimized models
+
+![12](https://user-images.githubusercontent.com/45697471/127755469-f80818a1-6284-4486-a3be-7de1e27cdb6f.png)
+
+- Random Forest R Square Value : 0.6401468962074119
+- Deep Learning R Square Value : 0.5832696557887808
+- Decision Tree R Square Value : 0.5747005190100378
+- Linear Regression R Square Value : 0.5567145646136205
+
