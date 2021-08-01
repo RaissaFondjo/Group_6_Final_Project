@@ -44,7 +44,7 @@ For this project we selected Airbnb datasets from Kaggle.  The datasets contain 
 
 ## Database ERD:
 * PostgresSQL is used to store and manipulate data. The image below represents the tables of data that are uploaded onto the database in Postgres. The entity relational diagram allows for easier joining of tables with SQL and is a helpful reference while importing data into the database. There are two main tables with data that is used to build and perform the machine learning model. 
-* The most common and obvious connect between the two datasets is the ID column.
+* The most common and obvious connect between the two datasets is the ID column. The below images was updated to show three additional columns added to final dataset.
 ![ERD_Air_BnB](https://user-images.githubusercontent.com/78666055/127744783-db7c1b33-212c-4dd1-9db6-4aaf8a27d0d3.png)
 
 * A sample code to merge the two tables can be found in the Jupyter Notebook file `AirBnB.ipynb`.
