@@ -175,7 +175,8 @@ To get the insight view of the Boston dataset, we used Tableau Visualization met
 ![Map](Resources/Map.png)
 
 
-  * We are now working on the next step, which is to deploy the map online using Heroku and Flask app. We need to find a way to read in the hidden API key to be able to display the map.
+  * The interactive map is deployed on Heroku at the following link:
+  https://airbnb-top200-mapping.herokuapp.com/
   
 ## The Visual Analysis Method:
 
