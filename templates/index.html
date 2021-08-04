@@ -6,9 +6,9 @@
             <title>Boston Airbnb Prices Prediction</title>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
            <link rel="stylesheet" href="../static/css/style.css">
-           <script src="script1.js"></script>
-           <script src="data.js"></script>
            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+           <script src="script.js"></script>
+
   
         </head>
   <!-- ======= Header The modular approach to the jQuery library allows the creation of powerful dynamic web pages and Web applications.
@@ -23,7 +23,7 @@
         <a class="nav-link active" href="http://127.0.0.1:5000">Home</a>
         <a class="nav-link" href="https://raissafondjo.github.io/Group_6_Final_Project/dashboards/tableau/index.html">Dashboards</a>
         <a class="nav-link" href="https://raissafondjo.github.io/Group_6_Final_Project/dashboards/index.html">Machine Learning </a>
-        <a class="nav-link" href="https://airbnb-top200-mapping.herokuapp.com/">View top 200 ratings</a>
+        <a class="nav-link" href="https://airbnb-top200-mapping.herokuapp.com/">Map</a>
 
         <a class="nav-link" href="https://github.com/RaissaFondjo/Group_6_Final_Project">Github Repository</a>
 
@@ -183,7 +183,7 @@
 
     <script>
         $("#form").on("submit", function (e){
-            if($("#security_deposit").val().length != 4 || $("#yearbuilt").val().length != 4 || $("#cleaning_fee").val().length !=4){
+            if($("#security_deposit").val().length != 4 || $("#bedrooms").val().length != 4 || $("#cleaning_fee").val().length !=4){
                 console.log("error");
                 e.preventDefault();
             }else {
