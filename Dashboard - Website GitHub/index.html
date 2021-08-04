@@ -23,12 +23,19 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
+<<<<<<< HEAD
       <a class="nav-link active" href="#exploration">Exploration</a>
       <a class="nav-link" href="#cleaning">Cleaning</a>
       <a class="nav-link" href="#selection">Selection </a>
       <a class="nav-link" href="#database">Mongodb Database</a>
       <a class="nav-link" href="#manipulation">Manipulation</a>
       <a class="nav-link" href="#learning">Learning</a>
+=======
+      <a class="nav-link active" href="#Preprocessed-the-raw-data">Preprocessed The Raw Data</a>
+      <a class="nav-link" href="#exploration">Exploratory Analysis</a>
+      <a class="nav-link" href="#selection">Features Selection </a>
+ 
+>>>>>>> c290fef9e10e111765eb84f7063e0775eb7bba69
       
     </div>
   </div>
@@ -63,16 +70,24 @@
       <h1>Machine Learning</h1>
       <p class="para">The lifecycle of our machine learning model:</p>
       <ul>
+<<<<<<< HEAD
         <li><p>Step 1: Data Exploration</p></li>
         <li><p>Step 2: Data Cleaning Feature Selection</p></li>
         <li><p>Step 3: Feature Selection</p></li>
         <li><p>Step 4: Connecting to Mongodb Database</p></li>
         <li><p>Step 5: Data Manipulation</p></li>
         <li><p>Step 6: Machine Learning</p></li>
+=======
+        <li><p>Step 1: Preprocessed The Raw Data</p></li>
+        <li><p>Step 2: Performed an exploratory analysis</p></li>
+        <li><p>Step 3: Features Selection</p></li>
+ 
+>>>>>>> c290fef9e10e111765eb84f7063e0775eb7bba69
       </ul>
   </div>
 </section>
 
+<<<<<<< HEAD
 <section class="data-exploration" id="exploration">
   <div class="container">
     <h1>Step 1: Data Exploration</h1>
@@ -92,11 +107,27 @@
     <p>For simplicity reason, we divided our data into 2 categories only: categorical and numerical. Since we have 81 features, it seems more practical to select only the most relevant ones for our final model. Using heatmap from seaborn module, we were able to identify numerical variables that are highly correlated with the target: sent price. We can also order the variables based on the degree of correlation with sent price. </p>
     <img src="../images/6.png">
     <img src="../images/7.png">
+=======
+<section class="Preprocessed-the-raw-data" id="Preprocessed the raw data">
+  <div class="container">
+    <h1>Step 1:  Preprocessed The Raw Data</h1>
+    <p>With the raw data loaded into a DataFrame using PyMongo, the first step was to convert all numerical variables into int / float format for processing using to_numeric(). Next, we checked for nulls and decided to drop the null values since it accounted for a small percentage of our rows. Once this was done, we encoded all categorical variables into numerical values that can be read by a Machine Learning algorithm.</p>
+    <img src="../images/9.png">
+   </div>
+</section>
+
+<section class="data-exploration" id="exploration">
+  <div class="container">
+    <h1>Step 2: Data Exploration </h1>
+    <p>In our exploratory analysis, we used the describe() method to create a statistical summary of our variables so we could assess our measures of central tendency and try to identify outliers. The next step was to use corr() to find variables that have a strong correlation with our target variable, price. We chose variables with a correlation coefficient above 0.20 to be used as features in our machine learning model. The following is a heatmap that shows correlation between our chosen variables.</p>
+    <img src="../images/6.png">
+>>>>>>> c290fef9e10e111765eb84f7063e0775eb7bba69
   </div>
 </section>
 
 <section class="feature-selection" id="selection">
   <div class="container">
+<<<<<<< HEAD
     <h1>Step 3: Feature Selection</h1>
     <p>At this stage, we selected the above top 9 numerical features that are highly correlated to rent price with additional 4 categorical variables( Air Conditioning, Neighbourhood Cleansed, Accomodates, Bedrooms, Beds, Cleaning Fee, Room Type, Security Deposit)that we thought might be important when guest are considering renting an Airbnb.</p>
   </div>
@@ -196,6 +227,23 @@
       <li><p>Use LabelEncoder for features that has order or hierarchy and One Hot Encoder for features that don’t have hierarchy to more accurately label encoding features (ex. neighborhoods)</p></li>
       <li><p>Try PCA to process features</p></li>
     </ul>
+=======
+    <h1>Step 3:Machine Learning</h1>
+    <p>With preprocessing complete, and features selected, we were ready to start testing our machine learning models. Our X variables included the features shown in the correlation matrix above, and our 'y' variable was price. We split the data into training and testing sets with a random state of 45, test size of 30% and training set size of 70%. We chose three different types of regression models to predict our target variable: Random Forest Regressor, Linear Regression, and Decision Tree regression. We wanted to see how these three different models will perform, and which one of them will give us the highest R squared value.</p>
+
+    <p>The Random Forest Regressor algorithm is a supervised learning model that can be used for classification and, in our case, regression. We chose this algorithm as it is good at learning complex and non-linear relationships, and is easy to interpret. Limitations for this model include: chances of overfitting and may require more memory to run model. This model gave us the highest R squared value (0.56) out of all models tested, as shown below. Of course, we also utilized the simple Linear Regression supervised learning model, which is easy to implement, less complex when compared to other algorithms, and simple to interpret. Limitations for this model include: the model can be negatively affected by outliers and it could oversimplify real world problems by assuming linear relationships between variables. This model gave us an R squared value of 0.51. The final model we used was the decision tree model, which is a simpler version of the Random Forest model. We included this model as it is easy to understand and interpret, works with numerical and categorical features, and requires little data preprocessing. However, one drawback of this model is a tendency to overfit. The decision tree model gave us an R squared value of 0.47, which was the lowest of all models tested.</p>
+    <img src="../images/7.png">
+    <p>As we can see, further optimization needs to be done to make our models more accurate. I plan on optimizing these models for the next segment by: </p>
+    <ul>
+      <li><p>Dimensionality reduction by means of feature elimination or feature reduction</p></li>
+      <li><p>Modifying the train, test split</p></li>
+    </ul>
+   <p>In the next segment, we also plan on utilizing the comments column in our dataset to perform a sentiment analysis using NLP. </p>
+   </div>
+</section>
+
+
+>>>>>>> c290fef9e10e111765eb84f7063e0775eb7bba69
   </div>
 </section>
 
