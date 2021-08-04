@@ -1,3 +1,12 @@
+click==7.1.2
+Flask==1.1.2
 gunicorn==20.1.0
 mrjob==0.7.4
+itsdangerous==1.1.0
+Jinja2==2.11.3
+MarkupSafe==1.1.1
+numpy
 PyYAML==5.4.1
+pandas==1.2.3
+scikit-learn
+werkzeug
