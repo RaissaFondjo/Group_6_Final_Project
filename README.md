@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 ![image](https://user-images.githubusercontent.com/79486450/126399958-f9bbb4c1-9681-4a9b-b625-9116ec35f2b2.png)
 
-=======
->>>>>>> c290fef9e10e111765eb84f7063e0775eb7bba69
 # Airbnb Price Prediction Using Machine Learning and Sentiment Analysis
 ## Group_6_Final_Project
 
@@ -17,7 +14,7 @@
 | [Raissa Fondjo]( https://github.com/RaissaFondjo)  |  Dashboard Lead  |  Manage the Presentation Google slides & Designed Mock-up Dashboard  |
 | [Geetha Shanthibushan](https://github.com/gshanthibushan)  |  Project Coordinator  |  Manage the Technologies and tracking group ideas, decisions, progress, and Designed Tableau Dashboard Presentation  |
 | [Lalchand Shivraj](https://github.com/LalchandShivraj)  |  Database Lead  | Manage the Database and ETL Process  |
- 
+
 Even though we have assigned role to each team member, the members will and to contribute equally throughout the final project.
 
 ---
@@ -39,25 +36,17 @@ For this project we selected Airbnb datasets from Kaggle.  The datasets contain 
 ## Questions we want to answer with the data: 
 - What are the key factors that affect the price of the rental property? 
     - We wanted to identify if the following key feature drive the price of the property: Neighborhood (Location), Competitor’s prices, Special Amenities, consumers’ reviews, and opinions.
-    
+
 - Within the same neighborhood what make a customer selecting one property vs another?
     - We wanted to identify if there is a correlation between reviews and # of times certain property being rent out.
-    
+
 - Which neighborhoods in Boston have the highest rental prices?
     - Reason behind the high price.
 
-<<<<<<< HEAD
 ## Database ERD:
 * PostgresSQL is used to store and manipulate data. The image below represents the tables of data that are uploaded onto the database in Postgres. The entity relational diagram allows for easier joining of tables with SQL and is a helpful reference while importing data into the database. There are two main tables with data that is used to build and perform the machine learning model. 
 * The most common and obvious connect between the two datasets is the ID column.
 ![ERD-Air_BandB](https://user-images.githubusercontent.com/78666055/125123343-8b499800-e0c4-11eb-8a4d-483298cb137a.png)
-=======
-
-## Database ERD:
-* PostgresSQL is used to store and manipulate data. The image below represents the tables of data that are uploaded onto the database in Postgres. The entity relational diagram allows for easier joining of tables with SQL and is a helpful reference while importing data into the database. There are two main tables with data that is used to build and perform the machine learning model. 
-* The most common and obvious connect between the two datasets is the ID column.
-![ERD_Air_BnB](https://user-images.githubusercontent.com/78666055/127744783-db7c1b33-212c-4dd1-9db6-4aaf8a27d0d3.png)
->>>>>>> c290fef9e10e111765eb84f7063e0775eb7bba69
 
 * A sample code to merge the two tables can be found in the Jupyter Notebook file `AirBnB.ipynb`.
 
@@ -66,19 +55,12 @@ airbnb_df = pd.merge(listings_df, reviews_df, how='left', left_on=['id'], right_
 airbnb_df.head(10)
 ```
 
-<<<<<<< HEAD
 ### Database - Getting the actual data:
-=======
-## Database - Getting the actual data:
->>>>>>> c290fef9e10e111765eb84f7063e0775eb7bba69
 
 * Two datasets were used: listings2017.csv and reviews2017 (in the Resources folder).
 * They are linked by the id and listing.id of the respective sets.
 
-<<<<<<< HEAD
 
-=======
->>>>>>> c290fef9e10e111765eb84f7063e0775eb7bba69
 Steps used in Transforming and Loading the data were:
 
 * On examing the dataset, the team decided on which columns to keep. This was processed by opening the csv file in excel and removing the unwanted columns.
@@ -94,7 +76,6 @@ Steps used in Transforming and Loading the data were:
 All related ETL and Database scripts and files are in the [ETL_and_Database](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/ETL_and_Database) folder.
 
 
-<<<<<<< HEAD
 ## Machine Learning Model Initiation:
 
   ![data-16-5-5-1-NLP-Pipeline](https://user-images.githubusercontent.com/45697471/125150334-fe76fc80-e10c-11eb-8974-252280baab95.png)
@@ -105,50 +86,11 @@ Our objective in this project is to predict Airbnb rental values using the featu
 - `host_response_rate`
 - `host_acceptance_rate`
 - `property_type`
-=======
-## Machine Learning Model:
-
-At this stage of the project, we did the following:
-- Preprocessed the raw data 
-- Performed an exploratory analysis 
-- selected features for our machine learning algorithms to predict price 
-
-In this section, I will explain my findings during this process. 
-
-**Preprocessing**
-
-With the raw data loaded into a DataFrame using PyMongo, the first step was to convert all numerical variables into int / float format for processing using `to_numeric()`. Next, we checked for nulls and decided to drop the null values since it accounted for a small percentage of our rows. Once this was done, we encoded all categorical variables into numerical values that can be read by a Machine Learning algorithm. 
-
-**Exploratory Analysis**
-
-In our exploratory analysis, we used the `describe()` method to create a statistical summary of our variables so we could assess our measures of central tendency and try to identify outliers. The next step was to use `corr()` to find variables that have a strong correlation with our target variable, price. We chose variables with a correlation coefficient above 0.20 to be used as features in our machine learning model. The following is a heatmap that shows correlation between our chosen variables: 
-
- ![2](https://user-images.githubusercontent.com/45697471/126885894-637280d9-57ab-40b3-b765-ffc873f66c44.png)
-
-
-**Machine Learning**
-
-With preprocessing complete, and features selected, we were ready to start testing our machine learning models. Our X variables included the features shown in the correlation matrix above, and our 'y' variable was price. We split the data into training and testing sets with a random state of 45, test size of 30% and training set size of 70%. We chose three different types of regression models to predict our target variable: Random Forest Regressor, Linear Regression, and Decision Tree regression. We wanted to see how these three different models will perform, and which one of them will give us the highest R squared value. 
-
-The Random Forest Regressor algorithm is a supervised learning model that can be used for classification and, in our case, regression. We chose this algorithm as it is good at learning complex and non-linear relationships, and is easy to interpret. Limitations for this model include: chances of overfitting and may require more memory to run model. This model gave us the highest R squared value (0.56) out of all models tested, as shown below. Of course, we also utilized the simple Linear Regression supervised learning model, which is easy to implement, less complex when compared to other algorithms, and simple to interpret. Limitations for this model include: the model can be negatively affected by outliers and it could oversimplify real world problems by assuming linear relationships between variables. This model gave us an R squared value of 0.51. The final model we used was the decision tree model, which is a simpler version of the Random Forest model. We included this model as it is easy to understand and interpret, works with numerical and categorical features, and requires little data preprocessing. However, one drawback of this model is a tendency to overfit. The decision tree model gave us an R squared value of 0.47, which was the lowest of all models tested. 
-
-![3](https://user-images.githubusercontent.com/45697471/126886189-5f7ece54-cde6-49a6-b54a-4b27bb82c2db.png)
-
-As we can see, further optimization needs to be done to make our models more accurate. I plan on optimizing these models for the next segment by:
-- Dimensionality reduction by means of feature elimination or feature reduction 
-- Modifying the train, test split 
-
-**Model Optimization**
-
-Since the previous segment, we have worked on optimizing the machine learning model to boost R squared scores for each model. We did so by reselecting appropriate features from the dataset, changing the train test split to 67%, 33% respectively and removing outliers that were present in the target variable. We have also added a Deep Learning Model with two hidden layers. The final feature selection for our machine learning (based on correlation coefficients) models is as follows: 
-
->>>>>>> c290fef9e10e111765eb84f7063e0775eb7bba69
 - `room_type`
 - `accomodates`
 - `bathrooms`
 - `bedrooms`
 - `beds`
-<<<<<<< HEAD
 - `bed_type`
 - `amenities`
 - `price`
@@ -163,57 +105,13 @@ Since the previous segment, we have worked on optimizing the machine learning mo
 Once the datasets are cleaned and any outliers are removed, we can use scikit-learn machine library's `f_regression()` function to provide correlation scores for the features listed above. Once we have these scores, we can select features that will increase our model's accuracy and drop any features that do not have a high correlation. This will help optimize our model for predictions.
 
 # Dashboard:
-=======
-- `price`
-- `security_deposit`
-- `cleaning_fee`
-- `air_conditioning`
-- `cable_tv`
-- `family_kid_friendly`
-- `gym`
-- `elevator`
-
-As we can see from the image below, there were outliers present in the price distribution which were giving the data a right skew. As we can see from the statistical summary, most of the samples from the price column are within the range of $215 and few samples that are less than $20 and greater than $500. 
-
-![2](https://user-images.githubusercontent.com/45697471/127755408-1b1599a2-fd49-4d5b-accb-c1ab8684162f.png)
-
-We ruled these ranges as outliers and removed them from the price distribution, which gave us a more normal looking distribution as seen below. 
-
-![3](https://user-images.githubusercontent.com/45697471/127755410-37bb2239-4529-4ee4-9e65-368b1febcbb8.png)
-
-**Deep Learning Model**
-
-In addition to our model optimization efforts, we added a Deep Learning model. They are useful because their structure of layers can be adapted to many types of problems, and their hidden layers reduce the need for feature engineering. One weakeness of this model is that they are computationally intensive to train. 
-
-**Final Results**
-
-Here is a chart comparing the R squared value of all the optimized models
-
-![12](https://user-images.githubusercontent.com/45697471/127755469-f80818a1-6284-4486-a3be-7de1e27cdb6f.png)
-
-- Random Forest R Square Value : 0.6401468962074119
-- Deep Learning R Square Value : 0.5832696557887808
-- Decision Tree R Square Value : 0.5747005190100378
-- Linear Regression R Square Value : 0.5567145646136205
-
-All related Machine Learning scripts and files are in the [Machine_Learning](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Machine_Learning) folder.
-
-
-## Dashboard:
->>>>>>> c290fef9e10e111765eb84f7063e0775eb7bba69
 To get the insight view of the Boston dataset, we used Tableau Visualization method to demonstrate the findings and for the further analysis. Furthermore, we created a website using GitHUb to present our project findings; as a navigation option we are displaying following tabs separately: Home, Dashboards, Machine Learning and GitHub Repository pages. In the Home tab we are in the process of creating Price Prediction calculator with the following features: Neighborhood, Bedroom, Quality, Room Type, Accommodate, etc. 
 
 |  **Objective**  |  **Link** |  **Description**  |      
 |  :---  |  :---  |  :---  |
 |  Anlysis  |  [Tableau](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)  |  The Visual Analysis  |
-<<<<<<< HEAD
 |  Website  |  [GitHub](https://raissafondjo.github.io/Group_6_Final_Project/templates/index.html)  |  The Website deployed on github (Work in progress)  |
 |  Presentation  |  [Google Slides](https://1drv.ms/p/s!Aq1EheQjtSdDjG16JEuz46iYVs-d?e=JgdjIm)  |  Google Slides for the presentation (Work in progress) |
-=======
-|  The Interactive Elements |  [Heroku](https://airbnb-top200-mapping.herokuapp.com/)  |  Boston neighborhoods and the top 200 listings  |
-|  Website  |  [GitHub](https://raissafondjo.github.io/Group_6_Final_Project/templates/index.html)  |  The Website deployed on github (Work in progress)  |
-|  Presentation  |  [Google Slides](https://docs.google.com/presentation/d/1aEzAcnQPQ26Mgu3uyPxv9UKH1f7kKL-D-o2jjF8_G2g/edit?usp=sharing)  |  Google Slides for the presentation (Work in progress) |
->>>>>>> c290fef9e10e111765eb84f7063e0775eb7bba69
 
 ## Following Tools were used:
   * Tableau Desktop App - exported data out of MongoDB into JSON files (airbnb_cleansed)
@@ -222,7 +120,7 @@ To get the insight view of the Boston dataset, we used Tableau Visualization met
   * Tableau for visualizations - Imported data into Tableau.
      - Created and style worksheets, dashboards, and stories in Tableau.
   * Visual Studio Code for our website code (js,html,css) 
- 
+
 ## The Interactive Elements:
   * An interactive map was created showing Boston neighborhoods and the top 200 listings based on `review_scores_rating`. For this, we first connected the Mongo database through `PyMongo.MongoClient` module while hiding our login credentials from uploaded code using the `getpass` function. A DataFrame was then generated with the columns we wanted to list on the map, then sorted based on score ratings before saving the data in a geojson format. 
 
@@ -230,9 +128,8 @@ To get the insight view of the Boston dataset, we used Tableau Visualization met
 ![Map](Resources/Map.png)
 
 
-  * The interactive map is deployed on Heroku at the following link:
-  https://airbnb-top200-mapping.herokuapp.com/
-  
+  * We are now working on the next step, which is to deploy the map online using Heroku and Flask app. We need to find a way to read in the hidden API key to be able to display the map.
+
 ## The Visual Analysis Method:
 
 We used visual analysis method to understand the dataset and to answer our questions.  This technique was the faster way for us to understand the dataset and to design our machine learning model.
@@ -281,7 +178,6 @@ We wanted to identify if there is a correlation between count of Listing, Avg. R
 Color shows average of Price.  Size shows average of Cleaning Fee.  The marks are labeled by Accomodates, Bathrooms, Beds, Room Type, Property Type, Neighborhood, average of Total Fee and average of Review Scores Rating. The view is filtered on average of Total Fee, which ranges from $25 to $1,500.
 ![Treemap - Comparative analysis of the Price](https://user-images.githubusercontent.com/79486450/126871773-b28ad731-7ecc-44f4-ba1f-db53f72babdb.png)
 
-<<<<<<< HEAD
 Work file: [Dashboard - Tableau](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Tableau).
 Work file: [Dashboard - Website GitHub](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Website%20GitHub).
 Work file: [Dashboard Presentation - Google Slides](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20Presentation%20-%20Google%20Slides).
@@ -321,13 +217,3 @@ As we can see, further optimization needs to be done to make our models more acc
 In the next segment, we also plan on utilizing the comments column in our dataset to perform a sentiment analysis using NLP. 
 
 All related Machine Learning scripts and files are in the [Machine_Learning](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Machine_Learning) folder.
-=======
-* Work file: [Dashboard - Tableau](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Tableau).
-* Work file: [Dashboard - Website GitHub](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Website%20GitHub).
-* Work file: [Dashboard Presentation - Google Slides](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20Presentation%20-%20Google%20Slides).
-
-
-## Result of analysis
-## Recommendation for future analysis
-## Anything the team would have done differently
->>>>>>> c290fef9e10e111765eb84f7063e0775eb7bba69
