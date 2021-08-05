@@ -237,6 +237,6 @@ Although we spent quite some time optimizing our machine learning models to prod
 
 - Supplement data with more current data from Airbnb
 - Add unsupervised learning to cluster patterns within the dataset, which could uncover relationships within variables 
-- Performing a qualitative assesment of how reviews affect Airbnb price 
+- Performing a qualitative assessment of how reviews affect Airbnb price 
 
 ## Anything the team would have done differently
