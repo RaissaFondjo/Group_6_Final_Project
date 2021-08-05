@@ -232,4 +232,11 @@ Color shows average of Price.  Size shows average of Cleaning Fee.  The marks ar
 
 ## Result of analysis
 ## Recommendation for future analysis
+
+Although we spent quite some time optimizing our machine learning models to produce an R squared value closer to 1, there are some changes that should be considered for future analysis. One of those considerations would be to perhaps use a logarithmic scale on the target variable, to further reduce the skewness towards large values in the dataset. This would give us a more normalized distribution to work with, which may enhance our results. Some further considerations for future analysis include: 
+
+- Supplement data with more current data from Airbnb
+- Add unsupervised learning to cluster patterns within the dataset, which could uncover relationships within variables 
+- Performing a qualitative assessment of how reviews affect Airbnb price 
+
 ## Anything the team would have done differently
