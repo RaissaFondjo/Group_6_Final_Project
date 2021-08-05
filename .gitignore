@@ -5,7 +5,9 @@ config.js
 .ipynb_checkpoints
 
 # Environment variables
-# .env
+.env
 
 # Node modules
 node_modules
+
+.DS_Store
