@@ -239,7 +239,7 @@ The Visual Analysis can be accessed from here:  [Tableau](https://public.tableau
 
 * Work file: [Dashboard - Tableau](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Tableau).
 * Work file: [Dashboard - The Interactive Elements](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/app).
-* Work file: [Dashboard - Website](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Website%20GitHub).
+* Work file: [Dashboard - Website](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard-Website).
 * Work file: [Dashboard Presentation - Google Slides](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20Presentation%20-%20Google%20Slides).
 
 ## Recommendation for future analysis
