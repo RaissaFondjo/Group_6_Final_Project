@@ -31,7 +31,7 @@ For this project we selected Airbnb datasets from Kaggle.  The datasets contain 
 |  Kaggle  |  https://www.kaggle.com/airbnb/boston  |  Calendar.csv, including listing id and the price and availability for that day  |
 
 ## Technologies & Tools that we used to for this project: 
-![Technologies & Tools](Resources/Technologies.png)
+![Technologies](https://user-images.githubusercontent.com/79486450/128601664-17a40b0e-5fc2-4a31-bffd-d10c5bb405ab.PNG)
 
 ## Questions we want to answer with the data: 
 - What are the key factors that affect the price of the rental property? 
@@ -236,7 +236,7 @@ Neighborhood with higher listings have lower average listing price and reviewed 
 ![Website](Resources/Website-front page.png)
 
 * Work file: [Dashboard - Tableau](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Tableau).
-* Work file: [Dashboard - The Interactive Elements](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Tableau).
+* Work file: [Dashboard - The Interactive Elements](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/app).
 * Work file: [Dashboard - Website](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Website%20GitHub).
 * Work file: [Dashboard Presentation - Google Slides](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20Presentation%20-%20Google%20Slides).
 
