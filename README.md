@@ -41,7 +41,7 @@ For this project we selected Airbnb datasets from Kaggle.  The datasets contain 
     - Reason behind the high price.
 
 - Popular neighborhood comparison with Number of listings, Average Price, Review Scores?
-    - We wanted to identify if there is a correlation between reviews and # of times certain property being rent out.
+    - We wanted to identify if there is a correlation between reviews and number of times certain property being rent out.
 
 ## Database ERD:
 * PostgresSQL is used to store and manipulate data. The image below represents the tables of data that are uploaded onto the database in Postgres. The entity relational diagram allows for easier joining of tables with SQL and is a helpful reference while importing data into the database. There are two main tables with data that is used to build and perform the machine learning model. 
@@ -156,7 +156,7 @@ To get the insight view of the Boston dataset, we used Tableau Visualization met
 
 |  **Objective**  |  **Link** |  **Description**  |      
 |  :---  |  :---  |  :---  |
-|  Visual Analysis  |  [Tableau](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)  |  The Visual Analysis  |
+|  Visual Analysis  |  [Tableau](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)  |  The Visual Analysis - Result |
 |  The Interactive Elements |  [Map](https://airbnb-top200-mapping.herokuapp.com/)  |  Boston neighborhoods and the top 200 listings - deployed on Heroku |
 |  Price prediction  |  [Website](https://bostonapp.herokuapp.com/)  |  The Website deployed on Heroku |
 |  Presentation  |  [Google Slides](https://docs.google.com/presentation/d/e/2PACX-1vSEVXgXFMcEAhCk5_DEbKTOqxVwCt50fzNE6SSpyRmiRhbUeSQHZhlSoX2OTNfvi2QDsUIZizPANJEF/pub?start=true&loop=true&delayms=3000)  |  Google Slides for the presentation |
@@ -222,18 +222,20 @@ We can conclude the following:
 Neighborhood with fewer listings have higher average listing price and review scored below median.
 Neighborhood with higher listings have lower average listing price and reviewed scored above median.
 
+The Visual Analysis can be accessed from here:  [Tableau](https://public.tableau.com/app/profile/geetha.shanthibushan/viz/AirbnbPriceAnalysisPrediction/AirbnbPriceAnalysis_1)
+
 ## The Interactive Elements:
   * An interactive map was created showing Boston neighborhoods and the top 200 listings based on `review_scores_rating`. For this, we first connected the Mongo database through `PyMongo.MongoClient` module while hiding our login credentials from uploaded code using the `getpass` function. A DataFrame was then generated with the columns we wanted to list on the map, then sorted based on score ratings before saving the data in a geojson format. 
 
   * From the geojson file containing the longitude and latitude, a pin and popup were added to the map in JavaScript and HTML, which worked locally.
 ![Map](Resources/Map.png)
 
-  * We successfully deploy the map online using Heroku and Flask app. The map can be accessed from here: [Map](https://airbnb-top200-mapping.herokuapp.com/) 
+  * We successfully deploy the map online using Heroku and Flask app. The map can be accessed from here: [Map](https://airbnb-top200-mapping.herokuapp.com/).
 
 ## Price prediction website:
-  * Furthermore, we created a website using Heroku and GitHUb page to present our project findings; as a navigation option we are displaying following tabs separately: Home, Dashboards, Machine Learning and GitHub Repository pages. In the Home tab we are in the process of creating Price Prediction calculator with the following features: Neighborhood, Bedroom, Quality, Room Type, Accommodate, etc.  The website can be accessed from here: [Website](https://bostonapp.herokuapp.com/) 
+  * Furthermore, we created a website using Heroku and GitHUb page to present our project findings; as a navigation option we are displaying following tabs separately: Home, Dashboards, Machine Learning and GitHub Repository pages. In the Home tab we are in the process of creating Price Prediction calculator with the following features: Neighborhood, Bedroom, Quality, Room Type, Accommodate, etc.  The website can be accessed from here: [Website](https://bostonapp.herokuapp.com/).
 
-![Website](Resources/Website-front page.png)
+![Website-front page](https://user-images.githubusercontent.com/79486450/128601891-f7df4db4-06e4-41ad-9775-513259950c3d.PNG)
 
 * Work file: [Dashboard - Tableau](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/Dashboard%20-%20Tableau).
 * Work file: [Dashboard - The Interactive Elements](https://github.com/Pascalduc/Group_6_Final_Project/tree/main/app).
