@@ -1,8 +1,7 @@
-# Airbnb Price Prediction Using Machine Learning and Sentiment Analysis
-## Group_6_Final_Project
+# Airbnb Price Prediction City of Boston - Machine Learning
+## Group 6 - Final Project
 
 ---
-
 ## Team Members:
 
 |  **Member**  |  **Role**  |  **Responsibilities**  |                                            
